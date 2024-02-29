@@ -6,7 +6,7 @@
       "leeftijd": 36,
       "actief": true,
       "geboortedatum": "1987-06-24",
-      "profielfoto": "https://example.com/messi.jpg",
+      "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/lionel_messi.png",
       "status": "online",
       "hobbies": ["voetbal", "gamen"],
       "club_details": {
@@ -17,7 +17,7 @@
           "clubnaam": "Inter Miami",
           "opgericht": "2018-01-01",
           "stadion": "Lockhart Stadium",
-          "logo": "https://example.com/inter-miami-logo.jpg"
+          "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/inter-miami.png"
         }
       }
     },
@@ -28,8 +28,8 @@
       "leeftijd": 39,
       "actief": true,
       "geboortedatum": "1985-02-05",
-      "profielfoto": "https://example.com/ronaldo.jpg",
-      "status": "offline",
+      "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/cristiano-ronaldo.png",
+      "status": "online",
       "hobbies": ["fitness", "mode"],
       "club_details": {
         "id": 102,
@@ -39,7 +39,7 @@
           "clubnaam": "Al-Nassr",
           "opgericht": "1995-10-24",
           "stadion": "Al-Awwal Park",
-          "logo": "https://example.com/al-nassr-logo.jpg"}
+          "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-nassr.png"}
       }
     },
     {
@@ -49,7 +49,7 @@
         "leeftijd": 32,
         "actief": true,
         "geboortedatum": "1992-02-05",
-        "profielfoto": "https://example.com/neymar.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/neymar-jr.png",
         "status": "online",
         "hobbies": ["salsa dansen", "gitaar spelen"],
         "club_details": {
@@ -60,7 +60,7 @@
               "clubnaam": "Al-Hilal",
               "opgericht": "1957-10-16",
               "stadion": "Kingdom Arena",
-              "logo": "https://example.com/al-hilal-logo.jpg"}
+              "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-hilal.png"}
           }
       },
       {
@@ -70,7 +70,7 @@
         "leeftijd": 25,
         "actief": true,
         "geboortedatum": "1998-12-20",
-        "profielfoto": "https://example.com/mbappe.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/kylian-mbappe.png",
         "status": "offline",
         "hobbies": ["videogames", "mode"],
         "club_details": {
@@ -81,7 +81,7 @@
               "clubnaam": "Paris Saint-Germain",
               "opgericht": "1970-08-12",
               "stadion": "Parc des Princes",
-              "logo": "https://example.com/psg-logo.jpg"}
+              "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/paris-saint-german.png"}
           }
       },
       {
@@ -91,7 +91,7 @@
         "leeftijd": 37,
         "actief": true,
         "geboortedatum": "1986-03-30",
-        "profielfoto": "https://example.com/ramos.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/sergio_ramos.png",
         "status": "online",
         "hobbies": ["paardrijden", "lezen"],
         "club_details": {
@@ -102,7 +102,7 @@
               "clubnaam": "Sevilla",
               "opgericht": "1980-01-25",
               "stadion": "Estadio Ramón Sánchez Pizjuán",
-              "logo": "https://example.com/sevilla-logo.jpg"}
+              "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/sevilla.png"}
           }
       },
       {
@@ -112,7 +112,7 @@
         "leeftijd": 32,
         "actief": true,
         "geboortedatum": "1991-06-28",
-        "profielfoto": "https://example.com/debruyne.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/kevin-debruyne.png",
         "status": "online",
         "hobbies": ["golfen", "koken"],
         "club_details": {
@@ -123,7 +123,7 @@
               "clubnaam": "Manchester City",
               "opgericht": "1880-11-13",
               "stadion": "Etihad Stadium",
-              "logo": "https://example.com/manchester-city-logo.jpg"}
+              "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"}
           }
       },
       {
@@ -133,7 +133,7 @@
         "leeftijd": 32,
         "actief": true,
         "geboortedatum": "1991-07-08",
-        "profielfoto": "https://example.com/vandijk.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/virgil-vandijk.png",
         "status": "offline",
         "hobbies": ["piano spelen", "reizen"],
         "club_details": {
@@ -144,7 +144,7 @@
             "clubnaam": "Liverpool",
             "opgericht": "1892-03-15",
             "stadion": "Anfield",
-            "logo": "https://example.com/liverpool-logo.jpg"}
+            "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"}
         }
       },
       {
@@ -154,7 +154,7 @@
         "leeftijd": 23,
         "actief": true,
         "geboortedatum": "2000-07-21",
-        "profielfoto": "https://example.com/haaland.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/erling_haaland.png",
         "status": "online",
         "hobbies": ["skiën", "gitaar spelen"],
         "club_details": {
@@ -165,7 +165,7 @@
             "clubnaam": "Manchester City",
             "opgericht": "1880-11-13",
             "stadion": "Etihad Stadium",
-            "logo": "https://example.com/manchester-city-logo.jpg"}
+            "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"}
         }
       },
       {
@@ -175,7 +175,7 @@
         "leeftijd": 33,
         "actief": true,
         "geboortedatum": "1992-06-15",
-        "profielfoto": "https://example.com/salah.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/mohamed-salah.png",
         "status": "online",
         "hobbies": ["golfen", "vissen"],
         "club_details": {
@@ -186,7 +186,7 @@
             "clubnaam": "Liverpool",
             "opgericht": "1892-03-15",
             "stadion": "Anfield",
-            "logo": "https://example.com/liverpool-logo.jpg"}
+            "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"}
         }
       },
       {
@@ -196,7 +196,7 @@
         "leeftijd": 35,
         "actief": true,
         "geboortedatum": "1988-08-21",
-        "profielfoto": "https://example.com/lewandowski.jpg",
+        "profielfoto": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/robert_lewandowski.png",
         "status": "online",
         "hobbies": ["schaken", "lezen"],
         "club_details": {
@@ -207,7 +207,7 @@
             "clubnaam": "FC Barcelona",
             "opgericht": "1899-11-29",
             "stadion": "Camp Nou",
-            "logo": "https://example.com/fcbarcelona-logo.jpg"}
+            "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/fc-barcelona.png"}
         }
       }
   ]
