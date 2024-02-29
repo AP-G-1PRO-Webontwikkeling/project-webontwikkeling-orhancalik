@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "naam": "Lionel Messi",
+      "beschrijving": "Argentijnse aanvaller, bekend om zijn dribbelvaardigheden en doelpunten",
+      "leeftijd": 36,
+      "actief": true,
+      "geboortedatum": "1987-06-24",
+      "profielfoto": "https://example.com/messi.jpg",
+      "status": "online",
+      "hobbies": ["voetbal", "gamen"],
+      "andere_gegevens": {
+        "id": 101,
+        "positie": "aanvaller",
+        "club": "Inter Miami"
+      }
+    },
+    {
+      "id": 2,
+      "naam": "Cristiano Ronaldo",
+      "beschrijving": "Portugese spits, beroemd om zijn kracht en doelgerichtheid",
+      "leeftijd": 39,
+      "actief": true,
+      "geboortedatum": "1985-02-05",
+      "profielfoto": "https://example.com/ronaldo.jpg",
+      "status": "offline",
+      "hobbies": ["fitness", "mode"],
+      "andere_gegevens": {
+        "id": 102,
+        "positie": "spits",
+        "club": "Al-Nassr"
+      }
+    },
+    {
+        "id": 3,
+        "naam": "Neymar Jr.",
+        "beschrijving": "Braziliaanse dribbelkoning en aanvaller",
+        "leeftijd": 32,
+        "actief": true,
+        "geboortedatum": "1992-02-05",
+        "profielfoto": "https://example.com/neymar.jpg",
+        "status": "online",
+        "hobbies": ["salsa dansen", "gitaar spelen"],
+        "andere_gegevens": {
+          "id": 103,
+          "positie": "aanvaller",
+          "club": "Al-Hilal"
+        }
+      },
+      {
+        "id": 4,
+        "naam": "Kylian Mbappé",
+        "beschrijving": "Franse snelheidsduivel en spits",
+        "leeftijd": 25,
+        "actief": true,
+        "geboortedatum": "1998-12-20",
+        "profielfoto": "https://example.com/mbappe.jpg",
+        "status": "offline",
+        "hobbies": ["videogames", "mode"],
+        "andere_gegevens": {
+          "id": 104,
+          "positie": "spits",
+          "club": "Paris Saint-Germain"
+        }
+      },
+      {
+        "id": 5,
+        "naam": "Sergio Ramos",
+        "beschrijving": "Spaanse verdediger en teamleider",
+        "leeftijd": 37,
+        "actief": true,
+        "geboortedatum": "1986-03-30",
+        "profielfoto": "https://example.com/ramos.jpg",
+        "status": "online",
+        "hobbies": ["paardrijden", "lezen"],
+        "andere_gegevens": {
+          "id": 105,
+          "positie": "verdediger",
+          "club": "Sevilla"
+        }
+      },
+      {
+        "id": 6,
+        "naam": "Kevin De Bruyne",
+        "beschrijving": "Belgische middenvelder met een geweldige pass en schottechniek",
+        "leeftijd": 32,
+        "actief": true,
+        "geboortedatum": "1991-06-28",
+        "profielfoto": "https://example.com/debruyne.jpg",
+        "status": "online",
+        "hobbies": ["golfen", "koken"],
+        "andere_gegevens": {
+          "id": 106,
+          "positie": "middenvelder",
+          "club": "Manchester City"
+        }
+      },
+      {
+        "id": 7,
+        "naam": "Virgil van Dijk",
+        "beschrijving": "Nederlandse centrale verdediger, sterk in de luchtduels",
+        "leeftijd": 32,
+        "actief": true,
+        "geboortedatum": "1991-07-08",
+        "profielfoto": "https://example.com/vandijk.jpg",
+        "status": "offline",
+        "hobbies": ["piano spelen", "reizen"],
+        "andere_gegevens": {
+          "id": 107,
+          "positie": "verdediger",
+          "club": "Liverpool"
+        }
+      },
+      {
+        "id": 8,
+        "naam": "Erling Haaland",
+        "beschrijving": "Noorse spits met een ongelooflijk doelpunteninstinct",
+        "leeftijd": 23,
+        "actief": true,
+        "geboortedatum": "2000-07-21",
+        "profielfoto": "https://example.com/haaland.jpg",
+        "status": "online",
+        "hobbies": ["skiën", "gitaar spelen"],
+        "andere_gegevens": {
+          "id": 108,
+          "positie": "spits",
+          "club": "Manchester City"
+        }
+      },
+      {
+        "id": 9,
+        "naam": "Mohamed Salah",
+        "beschrijving": "Egyptische vleugelspeler met een verwoestende snelheid",
+        "leeftijd": 33,
+        "actief": true,
+        "geboortedatum": "1992-06-15",
+        "profielfoto": "https://example.com/salah.jpg",
+        "status": "online",
+        "hobbies": ["golfen", "vissen"],
+        "andere_gegevens": {
+          "id": 109,
+          "positie": "vleugelspeler",
+          "club": "Liverpool"
+        }
+      },
+      {
+        "id": 10,
+        "naam": "Robert Lewandowski",
+        "beschrijving": "Poolse doelpuntenmachine en aanvoerder",
+        "leeftijd": 35,
+        "actief": true,
+        "geboortedatum": "1988-08-21",
+        "profielfoto": "https://example.com/lewandowski.jpg",
+        "status": "online",
+        "hobbies": ["schaken", "lezen"],
+        "andere_gegevens": {
+          "id": 110,
+          "positie": "spits",
+          "club": "Barcelona"
+        }
+      }
+  ]
+  
