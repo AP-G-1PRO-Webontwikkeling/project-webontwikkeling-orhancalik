@@ -1,0 +1,59 @@
+[
+    {
+    "id": 101,
+    "clubnaam": "Inter Miami",
+    "opgericht": "2018-01-01",
+    "stadion": "Lockhart Stadium",
+    "logo": "https://example.com/inter-miami-logo.jpg"
+  },
+  {
+    "id": 102,
+    "clubnaam": "Al-Nassr",
+    "opgericht": "1955-10-24",
+    "stadion": "Al-Awwal Park",
+    "logo": "https://example.com/al-nassr-logo.jpg"
+  },
+{
+    "id": 103,
+    "clubnaam": "Al-Hilal",
+    "opgericht": "1957-10-16",
+    "stadion": "Kingdom Arena",
+    "logo": "https://example.com/al-hilal-logo.jpg"
+},
+{
+    "id": 104,
+    "clubnaam": "Paris Saint-Germain",
+    "opgericht": "1970-08-12",
+    "stadion": "Parc des Princes",
+    "logo": "https://example.com/psg-logo.jpg"   
+},
+{
+    "id": 105,
+    "clubnaam": "Sevilla",
+    "opgericht": "1980-01-25",
+    "stadion": "Estadio Ramón Sánchez Pizjuán",
+    "logo": "https://example.com/sevilla-logo.jpg"   
+},
+{
+    "id": 106,
+    "clubnaam": "Manchester City",
+    "opgericht": "1880-11-13",
+    "stadion": "Etihad Stadium",
+    "logo": "https://example.com/manchester-city-logo.jpg"   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

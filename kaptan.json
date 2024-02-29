@@ -9,10 +9,16 @@
       "profielfoto": "https://example.com/messi.jpg",
       "status": "online",
       "hobbies": ["voetbal", "gamen"],
-      "andere_gegevens": {
+      "club_details": {
         "id": 101,
         "positie": "aanvaller",
-        "club": "Inter Miami"
+        "club": {
+          "id": 101,
+          "clubnaam": "Inter Miami",
+          "opgericht": "2018-01-01",
+          "stadion": "Lockhart Stadium",
+          "logo": "https://example.com/inter-miami-logo.jpg"
+        }
       }
     },
     {
@@ -25,10 +31,15 @@
       "profielfoto": "https://example.com/ronaldo.jpg",
       "status": "offline",
       "hobbies": ["fitness", "mode"],
-      "andere_gegevens": {
+      "club_details": {
         "id": 102,
-        "positie": "spits",
-        "club": "Al-Nassr"
+        "positie": "aanvaller",
+        "club": {
+          "id": 102,
+          "clubnaam": "Al-Nassr",
+          "opgericht": "1995-10-24",
+          "stadion": "Al-Awwal Park",
+          "logo": "https://example.com/al-nassr-logo.jpg"}
       }
     },
     {
@@ -41,11 +52,16 @@
         "profielfoto": "https://example.com/neymar.jpg",
         "status": "online",
         "hobbies": ["salsa dansen", "gitaar spelen"],
-        "andere_gegevens": {
-          "id": 103,
-          "positie": "aanvaller",
-          "club": "Al-Hilal"
-        }
+        "club_details": {
+            "id": 103,
+            "positie": "aanvaller",
+            "club": {
+              "id": 103,
+              "clubnaam": "Al-Hilal",
+              "opgericht": "1957-10-16",
+              "stadion": "Kingdom Arena",
+              "logo": "https://example.com/al-hilal-logo.jpg"}
+          }
       },
       {
         "id": 4,
@@ -57,11 +73,16 @@
         "profielfoto": "https://example.com/mbappe.jpg",
         "status": "offline",
         "hobbies": ["videogames", "mode"],
-        "andere_gegevens": {
-          "id": 104,
-          "positie": "spits",
-          "club": "Paris Saint-Germain"
-        }
+        "club_details": {
+            "id": 104,
+            "positie": "aanvaller",
+            "club": {
+              "id": 104,
+              "clubnaam": "Paris Saint-Germain",
+              "opgericht": "1970-08-12",
+              "stadion": "Parc des Princes",
+              "logo": "https://example.com/psg-logo.jpg"}
+          }
       },
       {
         "id": 5,
@@ -73,11 +94,16 @@
         "profielfoto": "https://example.com/ramos.jpg",
         "status": "online",
         "hobbies": ["paardrijden", "lezen"],
-        "andere_gegevens": {
-          "id": 105,
-          "positie": "verdediger",
-          "club": "Sevilla"
-        }
+        "club_details": {
+            "id": 105,
+            "positie": "verdediger",
+            "club": {
+              "id": 105,
+              "clubnaam": "Sevilla",
+              "opgericht": "1980-01-25",
+              "stadion": "Estadio Ramón Sánchez Pizjuán",
+              "logo": "https://example.com/sevilla-logo.jpg"}
+          }
       },
       {
         "id": 6,
@@ -89,11 +115,16 @@
         "profielfoto": "https://example.com/debruyne.jpg",
         "status": "online",
         "hobbies": ["golfen", "koken"],
-        "andere_gegevens": {
-          "id": 106,
-          "positie": "middenvelder",
-          "club": "Manchester City"
-        }
+        "club_details": {
+            "id": 106,
+            "positie": "middenvelder",
+            "club": {
+              "id": 106,
+              "clubnaam": "Manchester City",
+              "opgericht": "1880-11-13",
+              "stadion": "Etihad Stadium",
+              "logo": "https://example.com/manchester-city-logo.jpg"}
+          }
       },
       {
         "id": 7,
