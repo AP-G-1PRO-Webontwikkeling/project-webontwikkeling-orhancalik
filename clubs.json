@@ -40,10 +40,21 @@
     "opgericht": "1880-11-13",
     "stadion": "Etihad Stadium",
     "logo": "https://example.com/manchester-city-logo.jpg"   
+},
+{
+    "id": 107,
+    "clubnaam": "Liverpool",
+    "opgericht": "1892-03-15",
+    "stadion": "Anfield",
+    "logo": "https://example.com/liverpool-logo.jpg"   
+},
+{
+    "id": 108,
+    "clubnaam": "FC Barcelona",
+    "opgericht": "1899-11-29",
+    "stadion": "Camp Nou",
+    "logo": "https://example.com/barcelona-logo.jpg"   
 }
-
-
-
 
 
 

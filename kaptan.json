@@ -136,10 +136,15 @@
         "profielfoto": "https://example.com/vandijk.jpg",
         "status": "offline",
         "hobbies": ["piano spelen", "reizen"],
-        "andere_gegevens": {
+        "club_details": {
           "id": 107,
           "positie": "verdediger",
-          "club": "Liverpool"
+          "club": {
+            "id": 107,
+            "clubnaam": "Liverpool",
+            "opgericht": "1892-03-15",
+            "stadion": "Anfield",
+            "logo": "https://example.com/liverpool-logo.jpg"}
         }
       },
       {
@@ -152,10 +157,15 @@
         "profielfoto": "https://example.com/haaland.jpg",
         "status": "online",
         "hobbies": ["skiën", "gitaar spelen"],
-        "andere_gegevens": {
-          "id": 108,
-          "positie": "spits",
-          "club": "Manchester City"
+        "club_details": {
+          "id": 106,
+          "positie": "aanvaller",
+          "club": {
+            "id": 106,
+            "clubnaam": "Manchester City",
+            "opgericht": "1880-11-13",
+            "stadion": "Etihad Stadium",
+            "logo": "https://example.com/manchester-city-logo.jpg"}
         }
       },
       {
@@ -168,10 +178,15 @@
         "profielfoto": "https://example.com/salah.jpg",
         "status": "online",
         "hobbies": ["golfen", "vissen"],
-        "andere_gegevens": {
-          "id": 109,
-          "positie": "vleugelspeler",
-          "club": "Liverpool"
+        "club_details": {
+          "id": 107,
+          "positie": "aanvaller",
+          "club": {
+            "id": 107,
+            "clubnaam": "Liverpool",
+            "opgericht": "1892-03-15",
+            "stadion": "Anfield",
+            "logo": "https://example.com/liverpool-logo.jpg"}
         }
       },
       {
@@ -184,10 +199,15 @@
         "profielfoto": "https://example.com/lewandowski.jpg",
         "status": "online",
         "hobbies": ["schaken", "lezen"],
-        "andere_gegevens": {
-          "id": 110,
-          "positie": "spits",
-          "club": "Barcelona"
+        "club_details": {
+          "id": 108,
+          "positie": "aanvaller",
+          "club": {
+            "id": 108,
+            "clubnaam": "FC Barcelona",
+            "opgericht": "1899-11-29",
+            "stadion": "Camp Nou",
+            "logo": "https://example.com/fcbarcelona-logo.jpg"}
         }
       }
   ]
