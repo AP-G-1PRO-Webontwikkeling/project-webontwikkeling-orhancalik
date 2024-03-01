@@ -1,20 +1,20 @@
 export interface ClubDetail {
     id: number;
-    clubnaam: string;
-    opgericht: string;
-    stadion: string;
+    clubName: string;
+    founded: string;
+    stadium: string;
     logo: string;
 }
 
-export interface Voetballer {
+export interface Footballer {
     id: number;
-    naam: string;
-    beschrijving: string;
-    leeftijd: number;
-    actief: boolean;
-    geboortedatum: string;
-    profielfoto: string;
+    name: string;
+    description: string;
+    age: number;
+    active: boolean;
+    dateOfBirth: string;
+    profilePicture: string;
     status: string;
     hobbies: string[];
-    club_details: ClubDetail;
+    clubDetails: ClubDetail;
 }

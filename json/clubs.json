@@ -1,58 +1,58 @@
 [
     {
         "id": 101,
-        "clubnaam": "Inter Miami",
-        "opgericht": "2018-01-01",
-        "stadion": "Lockhart Stadium",
+        "clubName": "Inter Miami",
+        "founded": "2018-01-01",
+        "stadium": "Lockhart Stadium",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/inter-miami.png"
     },
     {
         "id": 102,
-        "clubnaam": "Al-Nassr",
-        "opgericht": "1955-10-24",
-        "stadion": "Al-Awwal Park",
+        "clubName": "Al-Nassr",
+        "founded": "1995-10-24",
+        "stadium": "Al-Awwal Park",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-nassr.png"
     },
     {
         "id": 103,
-        "clubnaam": "Al-Hilal",
-        "opgericht": "1957-10-16",
-        "stadion": "Kingdom Arena",
+        "clubName": "Al-Hilal",
+        "founded": "1957-10-16",
+        "stadium": "Kingdom Arena",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-hilal.png"
     },
     {
         "id": 104,
-        "clubnaam": "Paris Saint-Germain",
-        "opgericht": "1970-08-12",
-        "stadion": "Parc des Princes",
+        "clubName": "Paris Saint-Germain",
+        "founded": "1970-08-12",
+        "stadium": "Parc des Princes",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/paris-saint-german.png"
     },
     {
         "id": 105,
-        "clubnaam": "Sevilla",
-        "opgericht": "1980-01-25",
-        "stadion": "Estadio Ramón Sánchez Pizjuán",
+        "clubName": "Sevilla",
+        "founded": "1980-01-25",
+        "stadium": "Estadio Ramón Sánchez Pizjuán",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/sevilla.png"
     },
     {
         "id": 106,
-        "clubnaam": "Manchester City",
-        "opgericht": "1880-11-13",
-        "stadion": "Etihad Stadium",
+        "clubName": "Manchester City",
+        "founded": "1880-11-13",
+        "stadium": "Etihad Stadium",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"
     },
     {
         "id": 107,
-        "clubnaam": "Liverpool",
-        "opgericht": "1892-03-15",
-        "stadion": "Anfield",
+        "clubName": "Liverpool",
+        "founded": "1892-03-15",
+        "stadium": "Anfield",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"
     },
     {
         "id": 108,
-        "clubnaam": "FC Barcelona",
-        "opgericht": "1899-11-29",
-        "stadion": "Camp Nou",
+        "clubName": "FC Barcelona",
+        "founded": "1899-11-29",
+        "stadium": "Camp Nou",
         "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/fc-barcelona.png"
     }
 ]

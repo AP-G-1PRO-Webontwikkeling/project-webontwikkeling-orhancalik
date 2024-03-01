@@ -1,67 +1,67 @@
 import * as readline from 'readline-sync';
-import { Voetballer, ClubDetail } from './interfaces';
-import voetballers from "./json/voetballers.json";
+import { Footballer, ClubDetail } from './interfaces';
+import footballersData from "./json/footballers.json";
 import clubsData from "./json/clubs.json";
 
 
 function viewAllData(): void {
-    voetballers.forEach((voetballer: Voetballer) => {
+    footballersData.forEach((footballer: Footballer) => {
         console.log(`
-            ID: ${voetballer.id}
-            Naam: ${voetballer.naam}
-            Beschrijving: ${voetballer.beschrijving}
-            Leeftijd: ${voetballer.leeftijd}
-            Actief: ${voetballer.actief ? 'Ja' : 'Nee'}
-            Geboortedatum: ${voetballer.geboortedatum}
-            Profielfoto: ${voetballer.profielfoto}
-            Status: ${voetballer.status}
-            Hobbies: ${voetballer.hobbies.join(', ')}
+            ID: ${footballer.id}
+            Name: ${footballer.name}
+            Description: ${footballer.description}
+            Age: ${footballer.age}
+            Active: ${footballer.active ? 'Yes' : 'No'}
+            Date of Birth: ${footballer.dateOfBirth}
+            Profile Picture: ${footballer.profilePicture}
+            Status: ${footballer.status}
+            Hobbies: ${footballer.hobbies.join(', ')}
             Club Details:
-                ID: ${voetballer.club_details.id}
-                Clubnaam: ${voetballer.club_details.clubnaam}
-                Opgericht: ${voetballer.club_details.opgericht}
-                Stadion: ${voetballer.club_details.stadion}
-                Logo: ${voetballer.club_details.logo}
+                ID: ${footballer.clubDetails.id}
+                Club Name: ${footballer.clubDetails.clubName}
+                Founded: ${footballer.clubDetails.founded}
+                Stadium: ${footballer.clubDetails.stadium}
+                Logo: ${footballer.clubDetails.logo}
         `);
     });
 }
 
 function filterByID(): void {
-    const id = readline.question('Voer het ID in om op te filteren: ');
-    const filteredVoetballer = voetballers.find((voetballer: Voetballer) => voetballer.id === parseInt(id));
+    const id = readline.question('Enter the ID to filter by: ');
+    const filteredFootballer = footballersData.find((footballer: Footballer) => footballer.id === parseInt(id));
 
-    if (filteredVoetballer) {
+    if (filteredFootballer) {
         console.log(`
-            ID: ${filteredVoetballer.id}
-            Naam: ${filteredVoetballer.naam}
-            Beschrijving: ${filteredVoetballer.beschrijving}
-            Leeftijd: ${filteredVoetballer.leeftijd}
-            Actief: ${filteredVoetballer.actief ? 'Ja' : 'Nee'}
-            Geboortedatum: ${filteredVoetballer.geboortedatum}
-            Profielfoto: ${filteredVoetballer.profielfoto}
-            Status: ${filteredVoetballer.status}
-            Hobbies: ${filteredVoetballer.hobbies.join(', ')}
+            ID: ${filteredFootballer.id}
+            Name: ${filteredFootballer.name}
+            Description: ${filteredFootballer.description}
+            Age: ${filteredFootballer.age}
+            Active: ${filteredFootballer.active ? 'Yes' : 'No'}
+            Date of Birth: ${filteredFootballer.dateOfBirth}
+            Profile Picture: ${filteredFootballer.profilePicture}
+            Status: ${filteredFootballer.status}
+            Hobbies: ${filteredFootballer.hobbies.join(', ')}
             Club Details:
-                ID: ${filteredVoetballer.club_details.id}
-                Clubnaam: ${filteredVoetballer.club_details.clubnaam}
-                Opgericht: ${filteredVoetballer.club_details.opgericht}
-                Stadion: ${filteredVoetballer.club_details.stadion}
-                Logo: ${filteredVoetballer.club_details.logo}
+                ID: ${filteredFootballer.clubDetails.id}
+                Club Name: ${filteredFootballer.clubDetails.clubName}
+                Founded: ${filteredFootballer.clubDetails.founded}
+                Stadium: ${filteredFootballer.clubDetails.stadium}
+                Logo: ${filteredFootballer.clubDetails.logo}
         `);
     } else {
-        console.log('Geen voetballer gevonden met dat ID.');
+        console.log('No footballer found with that ID.');
     }
 }
 
 function main(): void {
-    console.log('Welkom bij de VoetbalDataViewer!\n');
+    console.log('Welcome to the FootballDataViewer!\n');
 
     while (true) {
-        console.log('1. Bekijk alle data');
-        console.log('2. Filter op ID');
+        console.log('1. View all data');
+        console.log('2. Filter by ID');
         console.log('3. Exit\n');
 
-        const choice = readline.question('Voer uw keuze in: ');
+        const choice = readline.question('Enter your choice: ');
 
         switch (choice) {
             case '1':
@@ -71,10 +71,10 @@ function main(): void {
                 filterByID();
                 break;
             case '3':
-                console.log('Tot ziens!');
+                console.log('Goodbye!');
                 return;
             default:
-                console.log('Ongeldige keuze. Probeer opnieuw.\n');
+                console.log('Invalid choice. Please try again.\n');
         }
     }
 }

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Lionel Messi",
+    "description": "Argentinian forward, known for his dribbling skills and goal-scoring prowess",
+    "age": 36,
+    "active": true,
+    "dateOfBirth": "1987-06-24",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/lionel_messi.png",
+    "status": "online",
+    "hobbies": [
+      "football",
+      "gaming"
+    ],
+    "clubDetails": {
+      "id": 101,
+      "clubName": "Inter Miami",
+      "founded": "2018-01-01",
+      "stadium": "Lockhart Stadium",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/inter-miami.png"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Cristiano Ronaldo",
+    "description": "Portuguese striker, famous for his strength and goal-scoring ability",
+    "age": 39,
+    "active": true,
+    "dateOfBirth": "1985-02-05",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/cristiano-ronaldo.png",
+    "status": "online",
+    "hobbies": [
+      "fitness",
+      "fashion"
+    ],
+    "clubDetails": {
+      "id": 102,
+      "clubName": "Al-Nassr",
+      "founded": "1995-10-24",
+      "stadium": "Al-Awwal Park",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-nassr.png"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Neymar Jr.",
+    "description": "Brazilian dribbling wizard and forward",
+    "age": 32,
+    "active": true,
+    "dateOfBirth": "1992-02-05",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/neymar-jr.png",
+    "status": "online",
+    "hobbies": [
+      "salsa dancing",
+      "playing guitar"
+    ],
+    "clubDetails": {
+      "id": 103,
+      "clubName": "Al-Hilal",
+      "founded": "1957-10-16",
+      "stadium": "Kingdom Arena",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-hilal.png"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Kylian Mbappé",
+    "description": "French speedster and striker",
+    "age": 25,
+    "active": true,
+    "dateOfBirth": "1998-12-20",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/kylian-mbappe.png",
+    "status": "offline",
+    "hobbies": [
+      "video games",
+      "fashion"
+    ],
+    "clubDetails": {
+      "id": 104,
+      "clubName": "Paris Saint-Germain",
+      "founded": "1970-08-12",
+      "stadium": "Parc des Princes",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/paris-saint-german.png"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Sergio Ramos",
+    "description": "Spanish defender and team leader",
+    "age": 37,
+    "active": true,
+    "dateOfBirth": "1986-03-30",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/sergio_ramos.png",
+    "status": "online",
+    "hobbies": [
+      "horse riding",
+      "reading"
+    ],
+    "clubDetails": {
+      "id": 105,
+      "clubName": "Sevilla",
+      "founded": "1980-01-25",
+      "stadium": "Estadio Ramón Sánchez Pizjuán",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/sevilla.png"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Kevin De Bruyne",
+    "description": "Belgian midfielder with incredible passing and shooting skills",
+    "age": 32,
+    "active": true,
+    "dateOfBirth": "1991-06-28",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/kevin-debruyne.png",
+    "status": "online",
+    "hobbies": [
+      "golfing",
+      "cooking"
+    ],
+    "clubDetails": {
+      "id": 106,
+      "clubName": "Manchester City",
+      "founded": "1880-11-13",
+      "stadium": "Etihad Stadium",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Virgil van Dijk",
+    "description": "Dutch central defender, strong in aerial duels",
+    "age": 32,
+    "active": true,
+    "dateOfBirth": "1991-07-08",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/virgil-vandijk.png",
+    "status": "offline",
+    "hobbies": [
+      "playing the piano",
+      "traveling"
+    ],
+    "clubDetails": {
+      "id": 107,
+      "clubName": "Liverpool",
+      "founded": "1892-03-15",
+      "stadium": "Anfield",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Erling Haaland",
+    "description": "Norwegian striker with an incredible goal-scoring instinct",
+    "age": 23,
+    "active": true,
+    "dateOfBirth": "2000-07-21",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/erling_haaland.png",
+    "status": "online",
+    "hobbies": [
+      "skiing",
+      "playing guitar"
+    ],
+    "clubDetails": {
+      "id": 106,
+      "clubName": "Manchester City",
+      "founded": "1880-11-13",
+      "stadium": "Etihad Stadium",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Mohamed Salah",
+    "description": "Egyptian winger with devastating speed",
+    "age": 33,
+    "active": true,
+    "dateOfBirth": "1992-06-15",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/mohamed-salah.png",
+    "status": "online",
+    "hobbies": [
+      "golfing",
+      "fishing"
+    ],
+    "clubDetails": {
+      "id": 107,
+      "clubName": "Liverpool",
+      "founded": "1892-03-15",
+      "stadium": "Anfield",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Robert Lewandowski",
+    "description": "Polish goal-scoring machine and captain",
+    "age": 35,
+    "active": true,
+    "dateOfBirth": "1988-08-21",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/robert_lewandowski.png",
+    "status": "online",
+    "hobbies": [
+      "playing chess",
+      "reading"
+    ],
+    "clubDetails": {
+      "id": 108,
+      "clubName": "FC Barcelona",
+      "founded": "1899-11-29",
+      "stadium": "Camp Nou",
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/fc-barcelona.png"
+    }
+  }
+]
