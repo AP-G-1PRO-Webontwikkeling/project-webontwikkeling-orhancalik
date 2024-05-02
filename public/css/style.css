@@ -1,3 +1,36 @@
 * {
     box-sizing: border-box;
 }
+
+.intro-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intro-title {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.intro-text:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('path/to/football-icon.png'); /* Voeg hier het pad toe naar je voetbalafbeelding */
+    background-size: cover;
+    margin: 0 auto 20px;
+}
