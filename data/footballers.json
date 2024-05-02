@@ -6,7 +6,7 @@
     "age": 36,
     "active": true,
     "dateOfBirth": "1987-06-24",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/lionel_messi.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/lionel_messi.png",
     "status": "online",
     "hobbies": [
       "football",
@@ -48,7 +48,7 @@
     "age": 32,
     "active": true,
     "dateOfBirth": "1992-02-05",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/neymar-jr.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/neymar-jr.png",
     "status": "online",
     "hobbies": [
       "salsa dancing",
@@ -90,7 +90,7 @@
     "age": 37,
     "active": true,
     "dateOfBirth": "1986-03-30",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/sergio_ramos.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/sergio_ramos.png",
     "status": "online",
     "hobbies": [
       "horse riding",
@@ -132,7 +132,7 @@
     "age": 32,
     "active": true,
     "dateOfBirth": "1991-07-08",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/virgil-vandijk.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/virgil-vandijk.png",
     "status": "offline",
     "hobbies": [
       "playing the piano",
@@ -174,7 +174,7 @@
     "age": 33,
     "active": true,
     "dateOfBirth": "1992-06-15",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/mohamed-salah.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/mohamed-salah.png",
     "status": "online",
     "hobbies": [
       "golfing",
@@ -195,7 +195,7 @@
     "age": 35,
     "active": true,
     "dateOfBirth": "1988-08-21",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/robert_lewandowski.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/robert_lewandowski.png",
     "status": "online",
     "hobbies": [
       "playing chess",
