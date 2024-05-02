@@ -69,7 +69,7 @@
     "age": 25,
     "active": true,
     "dateOfBirth": "1998-12-20",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/kylian-mbappe.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/kylian-mbappe.png",
     "status": "offline",
     "hobbies": [
       "video games",
@@ -111,7 +111,7 @@
     "age": 32,
     "active": true,
     "dateOfBirth": "1991-06-28",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/kevin-debruyne.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/kevin-debruyne.png",
     "status": "online",
     "hobbies": [
       "golfing",
@@ -153,7 +153,7 @@
     "age": 23,
     "active": true,
     "dateOfBirth": "2000-07-21",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/players/erling_haaland.png",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/erling_haaland.png",
     "status": "online",
     "hobbies": [
       "skiing",
