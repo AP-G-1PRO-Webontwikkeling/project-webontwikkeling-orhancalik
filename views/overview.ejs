@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voetballers Overzicht</title>
-</head>
-<body>
-    <% include('header') %>
-    <h1>Voetballers Overzicht</h1>
-    <ul>
-        <% footballers.forEach(footballer => { %>
-            <li><%= footballer.name %></li>
-        <% }); %>
-    </ul>
-    <% include('footer') %>
-</body>
-</html>
+<% include('header') %>
+<h1>Voetballers Overzicht</h1>
+<ul>
+  <% footballers.forEach(footballer => { %>
+  <li><%= footballer.name %></li>
+  <% }); %>
+</ul>
+<% include('footer') %>
