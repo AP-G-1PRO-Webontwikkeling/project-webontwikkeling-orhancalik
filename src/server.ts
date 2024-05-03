@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, '..', 'views'));
 
 // Welkomstpagina route
 app.get('/', (req, res) => {
-    res.render('welcome');
+    res.render('index');
 });
 
 // Dummy data
