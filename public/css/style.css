@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+  }
 
 .intro-container {
     background-color: #1e1e1e;
@@ -15,7 +23,7 @@
 .intro-title {
     color: #fff;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     text-transform: uppercase;
 }
 
@@ -34,3 +42,85 @@
     background-size: cover;
     margin: 0 auto 20px;
 }
+
+
+.explore-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Groene kleur, je kunt dit aanpassen */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Hover effect */
+  .explore-button:hover {
+    background-color: black; /* Donkerder groene kleur bij hover, je kunt dit aanpassen */
+  }
+
+/*slideshow*/
+.slideshow {
+    width: 100%;
+    max-width: 800px; /* Pas dit aan naar wens */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slideshow img {
+    width: 100%;
+    display: none;
+  }
+
+  /*footer*/
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-block {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% / 3);
+  }
+  
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .social-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-links a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    color: #ccc;
+  }
