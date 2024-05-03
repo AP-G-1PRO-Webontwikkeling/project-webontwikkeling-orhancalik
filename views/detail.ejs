@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Voetballer Details</title>
-</head>
-<body>
-    <% include('header') %>
+  </head>
+  <body>
+    <%-include('header') %>
 
     <div class="detail-container">
-        <div class="detail-header">
-            <img src="<%= footballer.profilePicture %>" alt="<%= footballer.name %>">
-            <h1><%= footballer.name %></h1>
-            <p><%= footballer.description %></p>
-        </div>
-        <div class="detail-info">
-            <h2>Leeftijd: <%= footballer.age %></h2>
-            <p>Geboortedatum: <%= footballer.dateOfBirth %></p>
-            <p>Status: <%= footballer.status %></p>
-            <h2>Hobbies</h2>
-            <ul>
-                <% footballer.hobbies.forEach(hobby => { %>
-                    <li><%= hobby %></li>
-                <% }); %>
-            </ul>
-            <h2>Club Details</h2>
-            <p>Club: <%= footballer.clubDetails.clubName %></p>
-            <p>Opgericht: <%= footballer.clubDetails.founded %></p>
-            <p>Stadion: <%= footballer.clubDetails.stadium %></p>
-            <img src="<%= footballer.clubDetails.logo %>" alt="<%= footballer.clubDetails.clubName %> Logo">
-        </div>
+      <div class="detail-header">
+        <img
+          src="<%= footballer.profilePicture %>"
+          alt="<%= footballer.name %>"
+        />
+        <h1><%= footballer.name %></h1>
+        <p><%= footballer.description %></p>
+      </div>
+      <div class="detail-info">
+        <h2>Leeftijd: <%= footballer.age %></h2>
+        <p>Geboortedatum: <%= footballer.dateOfBirth %></p>
+        <p>Status: <%= footballer.status %></p>
+        <h2>Hobbies</h2>
+        <ul>
+          <% footballer.hobbies.forEach(hobby => { %>
+          <li><%= hobby %></li>
+          <% }); %>
+        </ul>
+        <h2>Club Details</h2>
+        <p>Club: <%= footballer.clubDetails.clubName %></p>
+        <p>Opgericht: <%= footballer.clubDetails.founded %></p>
+        <p>Stadion: <%= footballer.clubDetails.stadium %></p>
+        <img
+          src="<%= footballer.clubDetails.logo %>"
+          alt="<%= footballer.clubDetails.clubName %> Logo"
+        />
+      </div>
     </div>
 
-    <% include('footer') %>
-</body>
+    <%-include('footer') %>
+  </body>
 </html>

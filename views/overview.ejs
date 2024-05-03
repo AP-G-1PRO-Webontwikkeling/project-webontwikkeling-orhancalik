@@ -1,8 +1,44 @@
-<% include('header') %>
-<h1>Voetballers Overzicht</h1>
-<ul>
-  <% footballers.forEach(footballer => { %>
-  <li><%= footballer.name %></li>
-  <% }); %>
-</ul>
-<% include('footer') %>
+<%-include('header') %>
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4">Voetballers Overzicht</h1>
+
+  <!-- Filter op naam -->
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Filter op naam"
+    class="w-full mb-4 rounded border border-gray-300 p-2"
+  />
+
+  <!-- Tabel met voetballers -->
+  <table class="w-full border border-gray-300">
+    <thead>
+      <tr class="bg-gray-200">
+        <% Object.keys(footballers[0]).forEach(key => { %> <% if (key !== 'id')
+        { %>
+        <th class="p-2 cursor-pointer" onclick="sortTable('<%= key %>')">
+          <%= key %>
+        </th>
+        <% } %> <% }); %>
+        <th class="p-2"></th>
+        <!-- Lege header voor detailknop -->
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <% footballers.forEach(footballer => { %>
+      <tr class="border-b border-gray-300">
+        <% Object.keys(footballer).forEach(key => { %> <% if (key !== 'id') { %>
+        <td class="p-2"><%= footballer[key] %></td>
+        <% } %> <% }); %>
+        <td class="p-2">
+          <a href="/detail/<%= footballer.id %>" class="text-blue-500"
+            >Details</a
+          >
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+<%-include('footer') %>
