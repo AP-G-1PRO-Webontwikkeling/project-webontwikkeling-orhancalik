@@ -1,44 +1,53 @@
 <%-include('header') %>
 <div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-4">Voetballers Overzicht</h1>
+  <h1 class="text-3xl font-bold mb-4">Ultimate Team van Kaptan</h1>
 
-  <!-- Filter op naam -->
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="Filter op naam"
-    class="w-full mb-4 rounded border border-gray-300 p-2"
-  />
+  <!-- Zoekveld -->
+  <input type="text" id="searchInput" placeholder="Zoek op naam..." class="w-full py-2 px-4 mb-4 rounded border border-gray-300">
 
   <!-- Tabel met voetballers -->
-  <table class="w-full border border-gray-300">
-    <thead>
-      <tr class="bg-gray-200">
-        <% Object.keys(footballers[0]).forEach(key => { %> <% if (key !== 'id')
-        { %>
-        <th class="p-2 cursor-pointer" onclick="sortTable('<%= key %>')">
-          <%= key %>
-        </th>
-        <% } %> <% }); %>
-        <th class="p-2"></th>
-        <!-- Lege header voor detailknop -->
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <% footballers.forEach(footballer => { %>
-      <tr class="border-b border-gray-300">
-        <% Object.keys(footballer).forEach(key => { %> <% if (key !== 'id') { %>
-        <td class="p-2"><%= footballer[key] %></td>
-        <% } %> <% }); %>
-        <td class="p-2">
-          <a href="/detail/<%= footballer.id %>" class="text-blue-500"
-            >Details</a
-          >
-        </td>
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
+  <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead>
+          <tr>
+              <th onclick="sortTable(0)">Name <span class="sort-icon"></span></th>
+              <th onclick="sortTable(1)">Description <span class="sort-icon"></span></th>
+              <th onclick="sortTable(2)">Age <span class="sort-icon"></span></th>
+              <th onclick="sortTable(3)">Active <span class="sort-icon"></span></th>
+              <th onclick="sortTable(4)">Date of Birth <span class="sort-icon"></span></th>
+              <th onclick="sortTable(5)">Profile Picture <span class="sort-icon"></span></th>
+              <th onclick="sortTable(6)">Position <span class="sort-icon"></span></th> <!-- Gewijzigd van Status naar Position -->
+              <th onclick="sortTable(7)">Hobbies <span class="sort-icon"></span></th>
+              <th onclick="sortTable(8)">Club Details <span class="sort-icon"></span></th>
+          </tr>
+      </thead>
+      <tbody id="tableBody">
+          <% footballers.forEach(footballer => { %>
+              <tr>
+                  <td><%= footballer.name %></td>
+                  <td><%= footballer.description %></td>
+                  <td><%= footballer.age %></td>
+                  <td><%= footballer.active ? 'Yes' : 'No' %></td>
+                  <td><%= footballer.dateOfBirth %></td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="img-container">
+                      <img src="<%= footballer.profilePicture %>" alt="Profielfoto" class="w-24 h-24 object-cover img-small">
+                    </div>
+                  </td>
+                  <td><%= footballer.position %></td> <!-- Gewijzigd van Status naar Position -->
+                  <td><%= footballer.hobbies.join(', ') %></td>
+                  <td>
+                      <img src="<%= footballer.clubDetails.logo %>" alt="Club Logo" width="50">
+                      <%= footballer.clubDetails.clubName %>
+                  </td>
+                  <td class="px-8 py-4 whitespace-nowrap">
+                    <a href="/detail/<%= footballer.id %>" class="">Details</a>
+                </td>
+              </tr>
+          <% }); %>
+      </tbody>
+      </table>
+  </div>
 </div>
 
 <%-include('footer') %>

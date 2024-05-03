@@ -2,12 +2,12 @@
   {
     "id": 1,
     "name": "Lionel Messi",
-    "description": "Argentinian forward, known for his dribbling skills and goal-scoring prowess",
+    "description": "Argentinian forward, known for his dribbling skills and goal-scoring",
     "age": 36,
     "active": true,
     "dateOfBirth": "1987-06-24",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/lionel_messi.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/lionel_messi.png",
+    "position": "Forward",
     "hobbies": [
       "football",
       "gaming"
@@ -17,7 +17,7 @@
       "clubName": "Inter Miami",
       "founded": "2018-01-01",
       "stadium": "Lockhart Stadium",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/inter-miami.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/inter-miami.png"
     }
   },
   {
@@ -27,8 +27,8 @@
     "age": 39,
     "active": true,
     "dateOfBirth": "1985-02-05",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/cristiano-ronaldo.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/cristiano-ronaldo.png",
+    "position": "Forward",
     "hobbies": [
       "fitness",
       "fashion"
@@ -38,7 +38,7 @@
       "clubName": "Al-Nassr",
       "founded": "1995-10-24",
       "stadium": "Al-Awwal Park",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-nassr.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/al-nassr.png"
     }
   },
   {
@@ -48,8 +48,8 @@
     "age": 32,
     "active": true,
     "dateOfBirth": "1992-02-05",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/neymar-jr.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/neymar-jr.png",
+    "position": "Forward",
     "hobbies": [
       "salsa dancing",
       "playing guitar"
@@ -59,7 +59,7 @@
       "clubName": "Al-Hilal",
       "founded": "1957-10-16",
       "stadium": "Kingdom Arena",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-hilal.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/al-hilal.png"
     }
   },
   {
@@ -69,8 +69,8 @@
     "age": 25,
     "active": true,
     "dateOfBirth": "1998-12-20",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/kylian-mbappe.png",
-    "status": "offline",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/kylian-mbappe.png",
+    "position": "Forward",
     "hobbies": [
       "video games",
       "fashion"
@@ -80,7 +80,7 @@
       "clubName": "Paris Saint-Germain",
       "founded": "1970-08-12",
       "stadium": "Parc des Princes",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/paris-saint-german.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/paris-saint-german.png"
     }
   },
   {
@@ -90,8 +90,8 @@
     "age": 37,
     "active": true,
     "dateOfBirth": "1986-03-30",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/sergio_ramos.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/sergio_ramos.png",
+    "position": "Defender",
     "hobbies": [
       "horse riding",
       "reading"
@@ -101,7 +101,7 @@
       "clubName": "Sevilla",
       "founded": "1980-01-25",
       "stadium": "Estadio Ramón Sánchez Pizjuán",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/sevilla.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/sevilla.png"
     }
   },
   {
@@ -111,8 +111,8 @@
     "age": 32,
     "active": true,
     "dateOfBirth": "1991-06-28",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/kevin-debruyne.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/kevin-debruyne.png",
+    "position": "Midfielder",
     "hobbies": [
       "golfing",
       "cooking"
@@ -122,7 +122,7 @@
       "clubName": "Manchester City",
       "founded": "1880-11-13",
       "stadium": "Etihad Stadium",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/manchester-city.png"
     }
   },
   {
@@ -132,8 +132,8 @@
     "age": 32,
     "active": true,
     "dateOfBirth": "1991-07-08",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/virgil-vandijk.png",
-    "status": "offline",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/virgil-vandijk.png",
+    "position": "Defender",
     "hobbies": [
       "playing the piano",
       "traveling"
@@ -143,7 +143,7 @@
       "clubName": "Liverpool",
       "founded": "1892-03-15",
       "stadium": "Anfield",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/liverpool.png"
     }
   },
   {
@@ -153,8 +153,8 @@
     "age": 23,
     "active": true,
     "dateOfBirth": "2000-07-21",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/erling_haaland.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/erling_haaland.png",
+    "position": "Forward",
     "hobbies": [
       "skiing",
       "playing guitar"
@@ -164,7 +164,7 @@
       "clubName": "Manchester City",
       "founded": "1880-11-13",
       "stadium": "Etihad Stadium",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/manchester-city.png"
     }
   },
   {
@@ -174,8 +174,8 @@
     "age": 33,
     "active": true,
     "dateOfBirth": "1992-06-15",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/mohamed-salah.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/mohamed-salah.png",
+    "position": "Forward",
     "hobbies": [
       "golfing",
       "fishing"
@@ -185,7 +185,7 @@
       "clubName": "Liverpool",
       "founded": "1892-03-15",
       "stadium": "Anfield",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/liverpool.png"
     }
   },
   {
@@ -195,8 +195,8 @@
     "age": 35,
     "active": true,
     "dateOfBirth": "1988-08-21",
-    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/spelers/robert_lewandowski.png",
-    "status": "online",
+    "profilePicture": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/spelers/robert_lewandowski.png",
+    "position": "Forward",
     "hobbies": [
       "playing chess",
       "reading"
@@ -206,7 +206,7 @@
       "clubName": "FC Barcelona",
       "founded": "1899-11-29",
       "stadium": "Camp Nou",
-      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/fc-barcelona.png"
+      "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/fc-barcelona.png"
     }
   }
 ]
