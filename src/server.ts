@@ -2,6 +2,7 @@
 import express from 'express';
 import path from 'path';
 import footballersData from '../data/footballers.json';
+import clubsData from '../data/clubs.json';
 // Maak een Express-applicatie
 const app = express();
 const PORT = 3000;
@@ -44,7 +45,19 @@ app.get('/detail/:id', (req, res) => {
     // Render de detailpagina en geef de voetballer door aan de template
     res.render('detail', { footballer });
 });
+app.get('/club/:id', (req, res) => {
+    const clubId = req.params.id;
 
+    // Vind de club met de opgegeven ID in de JSON-array
+    const club = clubsData.find(club => club.id === parseInt(clubId));
+
+    if (!club) {
+        return res.status(404).send('Club not found');
+    }
+
+    // Render de clubdetailpagina met de gegevens van de gevonden club
+    res.render('club', { club });
+});
 
 
 // Luister naar verzoeken op de opgegeven poort

@@ -4,55 +4,71 @@
         "clubName": "Inter Miami",
         "founded": "2018-01-01",
         "stadium": "Lockhart Stadium",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/inter-miami.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/inter-miami.png",
+        "website": "https://www.intermiamicf.com/",
+        "location": "Miami"
     },
     {
         "id": 102,
         "clubName": "Al-Nassr",
         "founded": "1995-10-24",
         "stadium": "Al-Awwal Park",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-nassr.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/al-nassr.png",
+        "website": "https://alnassr.sa/",
+        "location": "Riyadh"
     },
     {
         "id": 103,
         "clubName": "Al-Hilal",
         "founded": "1957-10-16",
         "stadium": "Kingdom Arena",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/al-hilal.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/al-hilal.png",
+        "website": "https://www.alhilal.com/",
+        "location": "Riyadh"
     },
     {
         "id": 104,
         "clubName": "Paris Saint-Germain",
         "founded": "1970-08-12",
         "stadium": "Parc des Princes",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/paris-saint-german.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/paris-saint-german.png",
+        "website": "https://en.psg.fr/",
+        "location": "Paris"
     },
     {
         "id": 105,
         "clubName": "Sevilla",
         "founded": "1980-01-25",
         "stadium": "Estadio Ramón Sánchez Pizjuán",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/sevilla.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/sevilla.png",
+        "website": "https://www.sevillafc.es/",
+        "location": "Sevilla"
     },
     {
         "id": 106,
         "clubName": "Manchester City",
         "founded": "1880-11-13",
         "stadium": "Etihad Stadium",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/manchester-city.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/manchester-city.png",
+        "website": "https://www.mancity.com/",
+        "location": "Manchester"
     },
     {
         "id": 107,
         "clubName": "Liverpool",
         "founded": "1892-03-15",
         "stadium": "Anfield",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/liverpool.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/liverpool.png",
+        "website": "https://www.liverpoolfc.com/",
+        "location": "Liverpool"
     },
     {
         "id": 108,
         "clubName": "FC Barcelona",
         "founded": "1899-11-29",
         "stadium": "Camp Nou",
-        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/assets/images/clubs/fc-barcelona.png"
+        "logo": "https://raw.githubusercontent.com/AP-G-1PRO-Webontwikkeling/project-webontwikkeling-orhancalik/main/public/assets/images/clubs/fc-barcelona.png",
+        "website": "https://www.fcbarcelona.com/",
+        "location": "Barcelona"
     }
 ]

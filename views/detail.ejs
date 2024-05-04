@@ -7,36 +7,29 @@
   </head>
   <body>
     <%-include('header') %>
-
+    <%-include('navbar') %>
     <div class="detail-container">
       <div class="detail-header">
-        <img
-          src="<%= footballer.profilePicture %>"
-          alt="<%= footballer.name %>"
-        />
-        <h1><%= footballer.name %></h1>
-        <p><%= footballer.description %></p>
+          <img src="<%= footballer.profilePicture %>" alt="<%= footballer.name %>">
+          <h1><%= footballer.name %></h1>
+          <p class="footballer-description"><%= footballer.description %></p>
       </div>
       <div class="detail-info">
-        <h2>Leeftijd: <%= footballer.age %></h2>
-        <p>Geboortedatum: <%= footballer.dateOfBirth %></p>
-        <p>Status: <%= footballer.status %></p>
-        <h2>Hobbies</h2>
-        <ul>
-          <% footballer.hobbies.forEach(hobby => { %>
-          <li><%= hobby %></li>
-          <% }); %>
-        </ul>
-        <h2>Club Details</h2>
-        <p>Club: <%= footballer.clubDetails.clubName %></p>
-        <p>Opgericht: <%= footballer.clubDetails.founded %></p>
-        <p>Stadion: <%= footballer.clubDetails.stadium %></p>
-        <img
-          src="<%= footballer.clubDetails.logo %>"
-          alt="<%= footballer.clubDetails.clubName %> Logo"
-        />
-      </div>
-    </div>
+          <h2>Algemene informatie</h2>
+          <p>Leeftijd: <%= footballer.age %></p>
+          <p>Geboortedatum: <%= footballer.dateOfBirth %></p>
+          <p>Positie: <%= footballer.position %></p>
+          <p>Club: <%= footballer.clubDetails.clubName %></p>
+          
+          <p>Hobbies: <ul>
+            <% footballer.hobbies.forEach(hobby => { %>
+            <li><%= hobby %></li>
+            <% }); %>
+        </ul></p>          
+          <img src="<%= footballer.clubDetails.logo %>" class="club-logo" alt="<%= footballer.clubDetails.clubName %> Logo">
+          <a href="/club/<%= footballer.clubDetails.id %>" class="club-detail-button">Bekijk club details</a>
+        </div>
+  </div>
 
     <%-include('footer') %>
   </body>

@@ -17,7 +17,7 @@
               <th onclick="sortTable(3)">Active <span class="sort-icon"></span></th>
               <th onclick="sortTable(4)">Date of Birth <span class="sort-icon"></span></th>
               <th onclick="sortTable(5)">Profile Picture <span class="sort-icon"></span></th>
-              <th onclick="sortTable(6)">Position <span class="sort-icon"></span></th> <!-- Gewijzigd van Status naar Position -->
+              <th onclick="sortTable(6)">Position <span class="sort-icon"></span></th> 
               <th onclick="sortTable(7)">Hobbies <span class="sort-icon"></span></th>
               <th onclick="sortTable(8)">Club Details <span class="sort-icon"></span></th>
           </tr>
@@ -42,7 +42,7 @@
                       <%= footballer.clubDetails.clubName %>
                   </td>
                   <td class="px-8 py-4 whitespace-nowrap">
-                    <a href="/detail/<%= footballer.id %>" class="">Details</a>
+                   <button class="footballer-details"><a href="/detail/<%= footballer.id %>" >Details</a></button> 
                 </td>
               </tr>
           <% }); %>
