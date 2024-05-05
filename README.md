@@ -2,12 +2,6 @@
 
 Welkom bij het Ultimate Team van Kaptan! Dit project stelt je in staat om informatie over voetbalspelers en clubs te bekijken.
 
-## Inhoudsopgave
-
-- [Installatie](#installatie)
-- [Gebruik](#gebruik)
-- [Licentie](#licentie)
-
 ## Inhoud
 
 Het Ultimate Team van Kaptan is een webapplicatie waarmee gebruikers informatie kunnen bekijken over verschillende voetbalspelers en clubs. Of je nu geïnteresseerd bent in de statistieken van je favoriete speler of meer wilt weten over een bepaalde club, deze applicatie heeft het allemaal.
