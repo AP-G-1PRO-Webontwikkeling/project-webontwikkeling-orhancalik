@@ -17,3 +17,6 @@ Het Ultimate Team van Kaptan is een webapplicatie waarmee gebruikers informatie 
 - **Spelersinformatie:** Bekijk gedetailleerde informatie over verschillende voetbalspelers, inclusief hun profielfoto, leeftijd, positie en andere relevante gegevens.
 - **Clubinformatie:** Ontdek interessante feiten over verschillende voetbalclubs, waaronder hun oprichtingsdatum, stadion en locatie.
 - **Zoekfunctie:** Gebruik de zoekfunctie om snel specifieke spelers of clubs te vinden en hun gegevens te bekijken.
+
+Project Webontwikkeling
+2024 Orhan Calik
