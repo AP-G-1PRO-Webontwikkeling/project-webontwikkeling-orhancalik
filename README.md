@@ -18,5 +18,6 @@ Het Ultimate Team van Kaptan is een webapplicatie waarmee gebruikers informatie 
 - **Clubinformatie:** Ontdek interessante feiten over verschillende voetbalclubs, waaronder hun oprichtingsdatum, stadion en locatie.
 - **Zoekfunctie:** Gebruik de zoekfunctie om snel specifieke spelers of clubs te vinden en hun gegevens te bekijken.
 
-Project Webontwikkeling
-2024 Orhan Calik
+
+##Project Webontwikkeling
+##2024 Orhan Calik
