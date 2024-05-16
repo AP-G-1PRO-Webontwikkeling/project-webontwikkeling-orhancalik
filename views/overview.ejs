@@ -25,9 +25,9 @@
       <tbody id="tableBody">
           <% footballers.forEach(footballer => { %>
               <tr>
-                  <td><%= footballer.name %></td>
-                  <td><%= footballer.description %></td>
-                  <td><%= footballer.age %></td>
+                <td class="name"><%= footballer.name %></td>
+                <td class="description"><%= footballer.description %></td>
+                <td class="age"><%= footballer.age %></td>
                   <td><%= footballer.active ? 'Yes' : 'No' %></td>
                   <td><%= footballer.dateOfBirth %></td>
                   <td class="px-6 py-4 whitespace-nowrap">
@@ -35,14 +35,8 @@
                       <img src="<%= footballer.profilePicture %>" alt="Profielfoto" class="w-24 h-24 object-cover img-small">
                     </div>
                   </td>
-                  <td><%= footballer.position %></td> <!-- Gewijzigd van Status naar Position -->
-                  <td>
-                    <% if (footballer.hobbies && Array.isArray(footballer.hobbies)) { %>
-                      <%= footballer.hobbies.join(', ') %>
-                    <% } else { %>
-                      No hobbies
-                    <% } %>
-                  </td>
+                  <td class="position"><%= footballer.position %></td>
+                  <td><%= footballer.hobbies.join(', ') %></td>
                   <td>
                       <img src="<%= footballer.clubDetails.logo %>" alt="Club Logo" width="50">
                       
