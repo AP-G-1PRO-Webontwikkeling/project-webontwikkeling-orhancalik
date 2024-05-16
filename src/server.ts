@@ -1,33 +1,34 @@
-// Importeer de benodigde modules
 import express from 'express';
 import path from 'path';
 import fs from 'fs';
-import footballersData from '../data/footballers.json';
-import clubsData from '../data/clubs.json';
-import { MongoClient, Db } from 'mongodb';
+import { MongoClient, Db, ObjectId } from 'mongodb';
 import dotenv from 'dotenv';
-// Maak een Express-applicatie
-const app = express();
-const PORT = 3000;
 
 dotenv.config();
 
-// Middleware
+const app = express();
+const PORT = 3000;
+
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'views'));
+app.use(express.urlencoded({ extended: true }));
 
-const mongoURI: string | undefined = process.env.MONGO_URI ?? '';
-const dbName = process.env.DB_NAME;
-const port = process.env.PORT;
-
-// Welkomstpagina route
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
+const mongoURI: string = process.env.MONGO_URI ?? '';
+const dbName = process.env.DB_NAME ?? '';
 const client = new MongoClient(mongoURI);
 let db: Db;
+
+interface Footballer {
+    _id: ObjectId;
+    name: string;
+    age: number;
+    position: string;
+    club: string;
+    profilePicture?: string;
+    description: string;
+    hobbies?: string[];
+}
 
 async function connectToMongoDB() {
     try {
@@ -41,79 +42,149 @@ async function connectToMongoDB() {
 
 async function importFootballersDataToMongoDB() {
     try {
-        // Controleer of de data al is geïmporteerd door te zoeken naar een document met 'imported: true'
+        const footballersDataPath = path.join(__dirname, '../data/footballers.json');
+        const footballersData = await fs.promises.readFile(footballersDataPath, 'utf-8');
+        const footballers: Footballer[] = JSON.parse(footballersData);
+
         const collection = db.collection('footballers');
 
-        // Logging toevoegen om te controleren of de MongoDB-collectie correct wordt geopend
-        console.log('Collection:', collection);
-
-        const isImported = await collection.findOne({ imported: true });
-
-        // Logging toevoegen om te controleren of 'isImported' correct wordt ingesteld
-        console.log('Is imported:', isImported);
-
-        if (!isImported) {
-            // Als de data nog niet is geïmporteerd, importeer deze dan
-            const footballersDataPath = path.join(__dirname, '../data/footballers.json');
-            const footballersData = await fs.promises.readFile(footballersDataPath, 'utf-8');
-            const footballers = JSON.parse(footballersData);
-
-            // Voeg de geïmporteerde veld 'imported: true' toe aan elk document
-            footballers.forEach((footballer: any) => footballer.imported = true);
-
-            // Voeg de gegevens toe aan de MongoDB-collectie
-            const result = await collection.insertMany(footballers);
-            console.log(`${result.insertedCount} documents were inserted into the footballers collection.`);
-        } else {
-            console.log('Data is al geïmporteerd. Overslaan...');
+        const count = await collection.countDocuments();
+        if (count > 0) {
+            console.log('Footballers data is already in the database.');
+            return;
         }
+
+        const result = await collection.insertMany(footballers);
+        console.log(`${result.insertedCount} documents were inserted into the footballers collection.`);
     } catch (error) {
         console.error('Error importing footballers data to MongoDB:', error);
     }
 }
-connectToMongoDB().then(() => importFootballersDataToMongoDB());
-// Dummy data
 
+async function importClubsDataToMongoDB() {
+    try {
+        const clubsDataPath = path.join(__dirname, '../data/clubs.json');
+        const clubsData = await fs.promises.readFile(clubsDataPath, 'utf-8');
+        const clubs = JSON.parse(clubsData);
 
-// Voetballers overzichtspagina route (veronderstelt dat je deze al hebt geïmplementeerd)
-app.get('/overview', (req, res) => {
-    const footballers = require('../data/footballers.json');
+        const collection = db.collection('clubs');
+        const count = await collection.countDocuments();
+        if (count === 0) {
+            const result = await collection.insertMany(clubs);
+            console.log(`${result.insertedCount} documents were inserted into the clubs collection.`);
+        } else {
+            console.log(`Clubs collection already contains data.`);
+        }
+    } catch (error) {
+        console.error('Error importing clubs data to MongoDB:', error);
+    }
+}
+
+connectToMongoDB().then(() => {
+    importFootballersDataToMongoDB();
+    importClubsDataToMongoDB();
+});
+
+// Welkomstpagina route
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
+// Voetballers overzichtspagina route
+app.get('/overview', async (req, res) => {
+    const collection = db.collection('footballers');
+    const footballers = await collection.find().toArray();
     res.render('overview', { footballers });
 });
 
-app.get('/detail/:id', (req, res) => {
-    // Haal het ID op uit de URL-parameter
-    const id = parseInt(req.params.id);
+// Voetballer detailpagina route
+app.get('/detail/:id', async (req, res) => {
+    const id = req.params.id;
 
-    // Zoek de voetballer met het overeenkomende ID
-    const footballer = footballersData.find((item: { id: number; }) => item.id === id);
+    try {
+        const collection = db.collection('footballers');
+        const footballer = await collection.findOne({ _id: new ObjectId(id) });
 
-    // Controleer of de voetballer is gevonden
-    if (!footballer) {
-        // Als de voetballer niet is gevonden, render een foutpagina of geef een foutmelding terug
-        res.status(404).send('Voetballer niet gevonden');
-        return;
+        if (!footballer) {
+            res.status(404).send('Voetballer niet gevonden');
+            return;
+        }
+
+        res.render('detail', { footballer });
+    } catch (error) {
+        console.error('Fout bij het ophalen van de voetballer:', error);
+        res.status(500).send('Er is een fout opgetreden bij het ophalen van de voetballer.');
     }
-
-    // Render de detailpagina en geef de voetballer door aan de template
-    res.render('detail', { footballer });
 });
-app.get('/club/:id', (req, res) => {
-    const clubId = req.params.id;
-
-    // Vind de club met de opgegeven ID in de JSON-array
-    const club = clubsData.find(club => club.id === parseInt(clubId));
+// Club detailpagina route
+app.get('/club/:id', async (req, res) => {
+    const clubId = parseInt(req.params.id);
+    const collection = db.collection('clubs');
+    const club = await collection.findOne({ id: clubId });
 
     if (!club) {
-        return res.status(404).send('Club not found');
+        return res.status(404).send('Club niet gevonden');
     }
 
-    // Render de clubdetailpagina met de gegevens van de gevonden club
     res.render('club', { club });
 });
 
+// Route voor het weergeven van het bewerkingsformulier
+app.get('/edit/:id', async (req, res) => {
+    const id = req.params.id;
 
-// Luister naar verzoeken op de opgegeven poort
+    try {
+        console.log('Edit pagina opgevraagd voor ID:', id);
+        const collection = db.collection('footballers');
+        console.log('Ontvangen ID voor bewerking:', id); // Nieuwe logging toegevoegd
+        const footballer = await collection.findOne({ _id: new ObjectId(id) }) as Footballer;
+
+        if (!footballer) {
+            console.log('Voetballer niet gevonden voor ID:', id);
+            res.status(404).send('Voetballer niet gevonden');
+            return;
+        }
+
+        console.log('Voetballer gevonden voor bewerking:', footballer);
+        res.render('edit', { footballer });
+    } catch (error) {
+        console.error('Fout bij het ophalen van de voetballer:', error);
+        res.status(500).send('Er is een fout opgetreden bij het ophalen van de voetballer.');
+    }
+});
+
+app.post('/edit/:id', async (req, res) => {
+    const id = req.params.id;
+    const { name, age, position, description } = req.body; // Verwijder description en profilePicture
+
+    try {
+        console.log('Bewerkingsverzoek ontvangen voor ID:', id);
+        const collection = db.collection('footballers');
+        const filter = { _id: new ObjectId(id) };
+        const updateDoc = {
+            $set: {
+                name,
+                age: parseInt(age, 10),
+                position,
+                description
+            }
+        };
+
+        const result = await collection.updateOne(filter, updateDoc);
+
+        if (result.modifiedCount === 1) {
+            console.log('Voetballer succesvol bijgewerkt:', id);
+            res.redirect('/overview');
+        } else {
+            console.log('Fout bij het bijwerken van de voetballer:', id);
+            res.status(500).send('Er is een fout opgetreden bij het bijwerken van de gegevens.');
+        }
+    } catch (error) {
+        console.error('Fout bij het bewerken van de voetballer:', error);
+        res.status(500).send('Er is een fout opgetreden bij het bewerken van de voetballer.');
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

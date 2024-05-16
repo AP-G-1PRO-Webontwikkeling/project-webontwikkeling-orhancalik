@@ -36,13 +36,19 @@
                     </div>
                   </td>
                   <td><%= footballer.position %></td> <!-- Gewijzigd van Status naar Position -->
-                  <td><%= footballer.hobbies.join(', ') %></td>
+                  <td>
+                    <% if (footballer.hobbies && Array.isArray(footballer.hobbies)) { %>
+                      <%= footballer.hobbies.join(', ') %>
+                    <% } else { %>
+                      No hobbies
+                    <% } %>
+                  </td>
                   <td>
                       <img src="<%= footballer.clubDetails.logo %>" alt="Club Logo" width="50">
-                      <%= footballer.clubDetails.clubName %>
+                      
                   </td>
                   <td class="px-8 py-4 whitespace-nowrap">
-                   <button class="footballer-details"><a href="/detail/<%= footballer.id %>" >Details</a></button> 
+                    <button class="footballer-details"><a href="/detail/<%= footballer._id %>" >Details</a></button>
                 </td>
               </tr>
           <% }); %>

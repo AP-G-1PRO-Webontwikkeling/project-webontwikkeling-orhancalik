@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%= footballer.name %></title>
+</head>
+<body>
+<%-include('header') %>
+<%-include('navbar') %>
+
+<div class="edit-container">
+    <h1>Edit <%= footballer.name %></h1>
+    <div class="footballer-details-edit">
+        <div class="profile-picture">
+            <img src="<%= footballer.profilePicture %>" alt="<%= footballer.name %>">
+        </div>
+        <form action="/edit/<%= footballer._id %>" method="POST" class="edit-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= footballer.name %>" required>
+        
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="<%= footballer.age %>" required>
+        
+            <label for="position">Position:</label>
+            <select id="position" name="position" required>
+                <option value="Goalkeeper" <% if (footballer.position === 'Goalkeeper') { %>selected<% } %>>Goalkeeper</option>
+                <option value="Defender" <% if (footballer.position === 'Defender') { %>selected<% } %>>Defender</option>
+                <option value="Midfielder" <% if (footballer.position === 'Midfielder') { %>selected<% } %>>Midfielder</option>
+                <option value="Forward" <% if (footballer.position === 'Forward') { %>selected<% } %>>Forward</option>
+            </select>
+        
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" value="<%= footballer.description%>" required>
+        
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</div>
+<%-include('footer') %>

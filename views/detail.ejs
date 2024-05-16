@@ -6,31 +6,39 @@
     <title>Voetballer Details</title>
   </head>
   <body>
-    <%-include('header') %>
-    <%-include('navbar') %>
+    <%- include('header') %>
+    <%- include('navbar') %>
     <div class="detail-container">
       <div class="detail-header">
-          <img src="<%= footballer.profilePicture %>" alt="<%= footballer.name %>">
-          <h1><%= footballer.name %></h1>
-          <p class="footballer-description"><%= footballer.description %></p>
+        <img src="<%= footballer.profilePicture %>" alt="<%= footballer.name %>">
+        <h1><%= footballer.name %></h1>
+        <p class="footballer-description"><%= footballer.description %></p>
       </div>
       <div class="detail-info">
-          <h2>Algemene informatie</h2>
-          <p>Leeftijd: <%= footballer.age %></p>
-          <p>Geboortedatum: <%= footballer.dateOfBirth %></p>
-          <p>Positie: <%= footballer.position %></p>
-          <p>Club: <%= footballer.clubDetails.clubName %></p>
-          
-          <p>Hobbies: <ul>
-            <% footballer.hobbies.forEach(hobby => { %>
-            <li><%= hobby %></li>
-            <% }); %>
-        </ul></p>          
-          <img src="<%= footballer.clubDetails.logo %>" class="club-logo" alt="<%= footballer.clubDetails.clubName %> Logo">
-          <a href="/club/<%= footballer.clubDetails.id %>" class="club-detail-button">Bekijk club details</a>
-        </div>
-  </div>
-
-    <%-include('footer') %>
+        <h2>Algemene informatie</h2>
+        <p>Leeftijd: <%= footballer.age %></p>
+        <p>Geboortedatum: <%= footballer.dateOfBirth %></p>
+        <p>Positie: <%= footballer.position %></p>
+        <p>Club: <%= footballer.clubDetails.clubName %></p>
+        <p>Hobbies: 
+          <ul>
+            <% if (footballer.hobbies) { %>
+              <% footballer.hobbies.forEach(hobby => { %>
+                <li><%= hobby %></li>
+              <% }); %>
+            <% } else { %>
+              <li>No hobbies available</li>
+            <% } %>
+          </ul>
+        </p>     
+        <img src="<%= footballer.clubDetails.logo %>" class="club-logo" alt="<%= footballer.clubDetails.clubName %> Logo">
+        <a href="/club/<%= footballer.clubDetails.id %>" class="club-detail-button">Bekijk club details</a>
+      </div>
+      <div class="edit-button-container">
+        <a href="/edit/<%= footballer._id %>" class="edit-button">Edit</a>
+      </div>
+      
+    </div>
+    <%- include('footer') %>
   </body>
 </html>

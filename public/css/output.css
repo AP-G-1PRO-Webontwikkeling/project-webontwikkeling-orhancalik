@@ -893,11 +893,8 @@ video {
 
 .club-detail-button {
   display: block;
-  /* Zorg ervoor dat de knop de volledige breedte van de container inneemt */
   margin: 0 auto;
-  /* Centreer de knop horizontaal */
   margin-top: 20px;
-  /* Voeg wat ruimte toe boven de knop */
   padding: 10px 20px;
   background-color: black;
   color: white;
@@ -908,7 +905,90 @@ video {
   border: none;
   cursor: pointer;
   width: fit-content;
-  /* Maak de breedte van de knop alleen zo breed als de inhoud */
+}
+
+.edit-button-container {
+  margin-top: 20px;
+}
+
+.edit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+/*edit*/
+input[type="text"],
+input[type="number"] {
+  color: black;
+}
+
+.edit-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: black
+}
+
+.edit-container h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 34px;
+  text-align: center;
+}
+
+.footballer-details-edit {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10%;
+}
+
+.profile-picture img {
+  max-width: 200px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.edit-form {
+  width: 100%;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="number"],
+.edit-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.edit-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-form button:hover {
+  background-color: #0056b3;
 }
 
 /*clubdetail*/
