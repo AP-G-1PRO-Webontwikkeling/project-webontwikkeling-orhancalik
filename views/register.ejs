@@ -1,0 +1,22 @@
+<%- include('header') %>
+<%- include('navbar') %>
+
+<div class="register-container">
+    <h1>Registreer je nu!</h1>
+    <!-- Register formulier -->
+    <form action="/register" method="POST">
+        <div class="form-group">
+            <label for="username">Gebruikersnaam:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Registreren</button>
+    </form>
+    <!-- Link naar de loginpagina -->
+    <p>Al een account? <a href="/login">Log in</a></p>
+</div>
+
+<%- include('footer') %>
