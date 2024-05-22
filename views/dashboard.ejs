@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <h1>Welkom op het dashboard!</h1>
-    <p>Hier zou je inhoud kunnen weergeven die alleen beschikbaar is voor ingelogde gebruikers.</p>
-    <% if (role === 'ADMIN') { %>
-        <button class="edit-btn">Edit</button>
-    <% } %>
-    <form action="/logout" method="POST">
-        <button type="submit">Uitloggen</button>
-    </form>
+<%- include('header') %>
+<%- include('navbar') %>
+
+    <div class="dashboard-container">
+        <h1>Welkom op het dashboard!</h1>
+        <p>Hier zou je inhoud kunnen weergeven die alleen beschikbaar is voor ingelogde gebruikers.</p>
+        <% if (role === 'ADMIN') { %>
+            <div class="admin-actions">
+                <a href="/overview"><button class="edit-btn">Edit</button></a>
+            </div>
+        <% } %>
+        <form action="/logout" method="POST">
+            <button type="submit" class="logout-btn">Uitloggen</button>
+        </form>
+    </div>
 </body>
 </html>
+
+<%-include('footer') %>
+

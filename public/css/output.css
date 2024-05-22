@@ -1135,7 +1135,37 @@ a:hover {
   text-decoration: underline;
 }
 
+/* admin dashboard */
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.edit-btn,
+.logout-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover,
+.logout-btn:hover {
+  background-color: #45a049;
+}
+
+.admin-actions {
+  margin-top: 20px;
+}
 
 /*login*/
 .login-container {

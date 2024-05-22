@@ -22,15 +22,11 @@
         <p>Club: <%= footballer.clubDetails.clubName %></p>
         <p>Hobbies: 
           <ul>
-            <% if (footballer.hobbies) { %>
-              <% footballer.hobbies.forEach(hobby => { %>
-                <li><%= hobby %></li>
-              <% }); %>
-            <% } else { %>
-              <li>No hobbies available</li>
-            <% } %>
+            <% footballer.hobbies.forEach(hobby => { %>
+              <li><%= hobby %></li>
+            <% }); %>
           </ul>
-        </p>     
+        </p>          
         <img src="<%= footballer.clubDetails.logo %>" class="club-logo" alt="<%= footballer.clubDetails.clubName %> Logo">
         <a href="/club/<%= footballer.clubDetails.id %>" class="club-detail-button">Bekijk club details</a>
       </div>

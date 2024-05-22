@@ -16,6 +16,10 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'views'));
 app.use(express.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+    res.locals.session = req.session;
+    next();
+});
 app.use(session({
     secret: 'geheim', // Willekeurige string gebruikt om sessiegegevens te coderen
     resave: false,
@@ -164,7 +168,7 @@ function ensureAdmin(req: Request, res: Response, next: NextFunction) {
 // Middleware om ingelogde gebruikers om te leiden van de loginpagina
 function redirectIfLoggedIn(req: Request, res: Response, next: NextFunction) {
     if (req.session.loggedIn) {
-        return res.redirect('/dashboard');
+        return res.redirect('/overview');
     }
     next();
 }
@@ -257,7 +261,7 @@ app.post('/edit/:id', ensureLoggedIn, ensureAdmin, async (req: Request, res: Res
     }
 });
 
-app.get('/login', (req, res) => {
+app.get('/login', redirectIfLoggedIn, (req, res) => {
     res.render('login', { session: req.session });
 });
 
@@ -326,6 +330,7 @@ app.post('/register', async (req: Request, res: Response) => {
 });
 
 app.get('/dashboard', (req, res) => {
+    console.log(req.session);
     res.render('dashboard', { role: req.session.role });
 });
 
