@@ -1,0 +1,15 @@
+<%-include('header') %>
+<%-include('navbar') %>
+
+<h2 class="clubs-intro">Clubs Overzicht:</h2>
+<div class="club-list">
+    <% clubs.forEach((club) => { %>
+        <a class="club_logos" href="/club/<%= club.id %>"> <!-- Link naar individuele clubdetails -->
+            <div class="club-item">
+                <img src="<%= club.logo %>" alt="<%= club.clubName %> Logo">
+                <h1 class="text-3xl font-bold mt-4 mb-2"><%= club.clubName %></h1>
+            </div>
+        </a>
+    <% }); %>
+</div>
+<%-include('footer') %>

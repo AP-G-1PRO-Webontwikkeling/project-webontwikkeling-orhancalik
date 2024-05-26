@@ -334,6 +334,18 @@ app.get('/dashboard', (req, res) => {
     res.render('dashboard', { role: req.session.role });
 });
 
+app.get('/clubs', ensureLoggedIn, async (req: Request, res: Response) => {
+    try {
+        const collection = db.collection('clubs');
+        const clubs = await collection.find().toArray();
+        res.render('clubs', { clubs, session: req.session });
+    } catch (error) {
+        console.error('Fout bij het ophalen van de clubs:', error);
+        res.status(500).send('Er is een fout opgetreden bij het ophalen van de clubs.');
+    }
+});
+
+
 app.post('/logout', (req: Request, res: Response) => {
     req.session.destroy((err) => {
         if (err) {

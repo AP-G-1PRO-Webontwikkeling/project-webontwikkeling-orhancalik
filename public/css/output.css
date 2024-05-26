@@ -1064,6 +1064,10 @@ input[type="number"] {
   border-radius: 50%;
 }
 
+.club-detail-header h1 {
+  text-align: left;
+}
+
 .club-detail-info {
   font-size: 18px;
   line-height: 1.6;
@@ -1270,4 +1274,46 @@ footer {
 
 .social-links a:hover {
   color: #ccc;
+}
+
+
+/*club*/
+
+
+.club-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* Laat de club-items wrapen naar een nieuwe regel indien nodig */
+}
+
+.club-item {
+  width: 200px;
+  /* Breedte van elk club-item */
+  margin: 10px;
+  /* Ruimte rond elk club-item */
+  text-align: center;
+  /* Centreer de inhoud van het club-item */
+}
+
+.club-item img {
+  height: 200px;
+  /* Hoogte van alle clublogo's */
+  width: 200px;
+  /* Breedte wordt automatisch geschaald om de verhoudingen te behouden */
+  margin-bottom: 10px;
+  /* Ruimte onder de logo's */
+}
+
+.club_logos {
+  color: black;
+}
+
+.club_logos h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-left: 15px;
+  margin-bottom: 20px;
 }
