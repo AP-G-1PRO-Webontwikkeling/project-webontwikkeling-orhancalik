@@ -160,7 +160,7 @@ function ensureLoggedIn(req: Request, res: Response, next: NextFunction) {
 // Middleware om ervoor te zorgen dat de gebruiker een admin is
 function ensureAdmin(req: Request, res: Response, next: NextFunction) {
     if (req.session.role !== 'ADMIN') {
-        return res.status(403).send('Toegang verboden');
+        return res.status(403).send('Toegang verboden, je hebt geen toestemming om deze pagina te bekijken. Ga terug naar de vorige pagina.');
     }
     next();
 }
@@ -241,17 +241,17 @@ app.get('/edit/:id', ensureLoggedIn, ensureAdmin, async (req: Request, res: Resp
 
 app.post('/edit/:id', ensureLoggedIn, ensureAdmin, async (req: Request, res: Response) => {
     const id = req.params.id;
-    const { name, age, position, club, description, hobbies } = req.body;
+    const { name, age, position, club, description } = req.body;
 
     try {
         const collection = db.collection('footballers');
         const result = await collection.updateOne(
             { _id: new ObjectId(id) },
-            { $set: { name, age, position, club, description, hobbies: hobbies ? hobbies.split(',') : [] } }
+            { $set: { name, age, position, club, description } }
         );
 
         if (result.modifiedCount === 0) {
-            return res.status(404).send('Voetballer niet gevonden');
+            return res.status(404).send('Je hebt niks aangepast aan de voetballer. Ga terug naar de vorige pagina en probeer het opnieuw.');
         }
 
         res.redirect('/overview');
