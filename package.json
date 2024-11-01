@@ -3,10 +3,13 @@
     "start": "ts-node src/app.ts"
   },
   "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
     "fs": "^0.0.1-security",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.7.4",
     "@types/readline-sync": "^1.4.8",
     "ts-node": "^10.9.2",

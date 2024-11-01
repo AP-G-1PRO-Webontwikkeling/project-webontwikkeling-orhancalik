@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Expenses</h1>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Currency</th>
+                <th>Payment Method</th>
+                <th>Income</th>
+                <th>Category</th>
+                <th>Tags</th>
+                <th>Paid</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (expenses.length > 0) { %>
+                <% expenses.forEach(expense => { %>
+                    <tr>
+                        <td><%= expense.description %></td>
+                        <td><%= expense.amount %></td>
+                        <td><%= expense.currency %></td>
+                        <td><%= expense.paymentMethod.method %></td>
+                        <td><%= expense.isIncoming ? 'Yes' : 'No' %></td>
+                        <td><%= expense.category %></td>
+                        <td><%= expense.tags.join(', ') %></td>
+                        <td><%= expense.isPaid ? 'Yes' : 'No' %></td>
+                        <td><%= expense.date %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="9">No expenses found.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-primary mt-3">Add New Expense</a>
+</div>
+
+<%- include('partials/footer') %>

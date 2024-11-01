@@ -23,52 +23,7 @@
           "Dinner"
         ],
         "isPaid": true
-      },
-      {
-        "id": 2,
-        "description": "Drinks",
-        "amount": 33,
-        "date": "2024-09-21T16:00:59.935Z",
-        "currency": "EUR",
-        "paymentMethod": {
-          "method": "Credit Card",
-          "cardDetails": {
-            "number": "**** **** **** 1234",
-            "expiryDate": "12/25"
-          }
-        },
-        "isIncoming": false,
-        "category": "Drinks",
-        "tags": [
-          "Party"
-        ],
-        "isPaid": true
-      },
-      {
-        "id": 3,
-        "description": "Coffee",
-        "amount": 4,
-        "date": "2024-10-03T11:29:18.719Z",
-        "currency": "EUR",
-        "paymentMethod": {
-          "method": "Credit Card",
-          "cardDetails": {
-            "number": "**** **** **** 1234",
-            "expiryDate": "12/25"
-          }
-        },
-        "isIncoming": false,
-        "category": "Drinks",
-        "tags": [
-          "Breakfast"
-        ],
-        "isPaid": true
       }
-    ],
-    "budget": {
-      "monthlyLimit": 1000,
-      "notificationThreshold": 0.9,
-      "isActive": true
-    }
+    ]
   }
 ]
