@@ -1,6 +1,16 @@
 <%- include('partials/header') %>
 
-<h1>Transacties Overzicht</h1>
+<% if (userId) { %>
+    <div class="navbar">
+        <a href="/logout" class="btn-logout">Uitloggen</a>
+    </div>
+<% } else { %>
+    <div class="navbar">
+        <a href="/login" class="btn-login">Inloggen</a>
+    </div>
+<% } %>
+
+<h1>Overzicht van uw transacties</h1>
 
 <!-- Zoekformulier -->
 <form action="/" method="GET">
@@ -16,12 +26,7 @@
     <button type="submit">Zoeken</button>
 </form>
 
-<!-- Navigatie voor inloggen/uitloggen -->
-<% if (user) { %>
-    <a href="/logout">Uitloggen</a>
-<% } else { %>
-    <a href="/login">Inloggen</a>
-<% } %>
+
 <!-- Inkomsten Sectie -->
 <h2>Inkomsten</h2>
 <table>

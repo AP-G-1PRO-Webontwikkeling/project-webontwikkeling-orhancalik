@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { getDb } from "../database";
 import bcrypt from "bcrypt";
-
+import { isLoggedIn } from "../middleware/authMiddleware";
 
 const router = Router();
 
@@ -37,7 +37,7 @@ router.post("/register", async (req, res) => {
 });
 
 // Login
-router.get("/login", (req, res) => {
+router.get("/login", isLoggedIn, (req, res) => {
     res.render("login"); // Zorg voor een 'login.ejs' of een andere view
 });
 

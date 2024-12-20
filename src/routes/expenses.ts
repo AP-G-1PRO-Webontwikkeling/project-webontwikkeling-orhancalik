@@ -37,7 +37,7 @@ router.get("/", isAuthenticated, async (req, res) => {
         // Stuur filter, isIncoming en user naar de view
         const isIncoming = filter === "income" ? "true" : filter === "expense" ? "false" : "";
 
-        res.render("index", { expenses, filter, search, isIncoming, user });
+        res.render("index", { expenses, filter, search, isIncoming, userId: req.session.userId });
 
     } catch (err) {
         console.error(err);

@@ -8,8 +8,10 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
+    background-color: #ecf0f1;
+    /* Lichtgrijze achtergrond voor rust */
     color: #333;
+    /* Donkere tekst voor leesbaarheid */
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,15 +25,25 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Formulierkoptekst */
 h1 {
     text-align: center;
     color: #2c3e50;
+    font-size: 32px;
     margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: darkslategray;
+    font-size: 24px;
 }
 
 /* Label styling */
@@ -40,6 +52,7 @@ label {
     margin-bottom: 8px;
     font-weight: bold;
     color: #2c3e50;
+    font-size: 16px;
 }
 
 /* Inputvelden, select en textarea */
@@ -47,12 +60,13 @@ input,
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 14px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     box-sizing: border-box;
+    transition: border 0.3s ease;
 }
 
 /* Focus-effect voor inputvelden */
@@ -60,16 +74,18 @@ input:focus,
 select:focus,
 textarea:focus {
     border-color: #3498db;
+    /* Blauwe rand bij focus */
     outline: none;
 }
 
 /* Submit knop */
 button {
-    padding: 12px;
+    padding: 14px;
     background-color: #3498db;
+    /* Blauwe knop */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -79,23 +95,27 @@ button {
 /* Hover-effect voor de submit knop */
 button:hover {
     background-color: #2980b9;
+    /* Donkerder blauw bij hover */
 }
 
 /* Terugknop */
 a.btn-back {
     display: inline-block;
     background-color: #e74c3c;
+    /* Rood voor terugknop */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-top: 20px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 /* Hover-effect voor terugknop */
 a.btn-back:hover {
     background-color: #c0392b;
+    /* Donkerder rood bij hover */
 }
 
 /* Tabel styling */
@@ -115,6 +135,7 @@ td {
 /* Styling voor de tabelkoppen */
 th {
     background-color: #3498db;
+    /* Blauwe koppen */
     color: white;
 }
 
@@ -124,68 +145,117 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #ecf0f1;
+    /* Lichte grijze hover achtergrond */
 }
 
 /* Knop styling voor bewerking en verwijdering */
 button,
 a {
-    padding: 8px 12px;
+    padding: 10px 15px;
     margin-right: 10px;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-edit {
-    background-color: #4CAF50;
+    background-color: #2ecc71;
+    /* Groene bewerk-knop */
     color: white;
 }
 
 .btn-edit:hover {
-    background-color: #45a049;
+    background-color: #27ae60;
+    /* Donkerder groen bij hover */
 }
 
 .btn-delete {
     background-color: #e74c3c;
+    /* Rood voor verwijderen */
     color: white;
     border: none;
 }
 
 .btn-delete:hover {
     background-color: #c0392b;
+    /* Donkerder rood bij hover */
 }
 
 .btn-add {
     display: inline-block;
     background-color: #3498db;
+    /* Blauwe toevoeg knop */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-top: 20px;
 }
 
 .btn-add:hover {
     background-color: #2980b9;
+    /* Donkerder blauw bij hover */
 }
 
-
+/* Alert styling */
 .alert {
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
+/* Succes alert */
 .alert-success {
     color: #155724;
-
 }
 
+/* Fout alert */
 .alert-danger {
     color: #721c24;
+}
 
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    text-align: right;
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #34495e;
+}
+
+/* Knoppen voor uitloggen en inloggen */
+.btn-logout,
+.btn-login {
+    background-color: #f44336;
+    /* Rood voor uitloggen/inloggen */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-logout:hover,
+.btn-login:hover {
+    background-color: #d32f2f;
+    /* Donkerder rood bij hover */
 }
 
 /* Responsieve styling voor kleine schermen */

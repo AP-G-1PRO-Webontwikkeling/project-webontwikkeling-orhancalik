@@ -1,6 +1,7 @@
 <%- include('partials/header') %>
 
 <h1>Shop van Kaptan</h1>
+<h2>Registreer je hier!</h2>
 
 <form action="/register" method="POST">
     <label for="username">Gebruikersnaam:</label>
@@ -12,6 +13,6 @@
     <button type="submit">Registreren</button>
 </form>
 
-
+<button onclick="window.location.href='/login';">Al een account? Log in hier</button>
 
 <%- include('partials/footer') %>
