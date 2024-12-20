@@ -1,58 +1,118 @@
 <%- include('partials/header') %>
 
-<div class="container mt-5">
-    <h1 class="mb-4"></h1>
-    <form action="/expenses" method="POST" class="needs-validation" novalidate>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description:</label>
-            <input type="text" name="description" class="form-control" id="description" required>
-            <div class="invalid-feedback">
-                Please provide a description.
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="amount" class="form-label">Amount:</label>
-            <input type="number" name="amount" step="0.01" class="form-control" id="amount" required>
-            <div class="invalid-feedback">
-                Please provide a valid amount.
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="currency" class="form-label">Currency:</label>
-            <input type="text" name="currency" class="form-control" id="currency" required>
-            <div class="invalid-feedback">
-                Please provide a currency.
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="paymentMethod" class="form-label">Payment Method:</label>
-            <input type="text" name="paymentMethod" class="form-control" id="paymentMethod" required>
-            <div class="invalid-feedback">
-                Please provide a payment method.
-            </div>
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" name="isIncome" class="form-check-input" id="isIncome">
-            <label class="form-check-label" for="isIncome">Income</label>
-        </div>
-        <div class="mb-3">
-            <label for="category" class="form-label">Category:</label>
-            <input type="text" name="category" class="form-control" id="category" required>
-            <div class="invalid-feedback">
-                Please provide a category.
-            </div>
-        </div>
-        <div class="mb-3">
-            <label for="tags" class="form-label">Tags (comma-separated):</label>
-            <input type="text" name="tags" class="form-control" id="tags">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" name="isPaid" class="form-check-input" id="isPaid">
-            <label class="form-check-label" for="isPaid">Paid</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Add Expense</button>
-    </form>
-    <a href="/expenses" class="btn btn-secondary mt-3">View Expenses</a>
-</div>
+<h1>Transacties Overzicht</h1>
+
+<!-- Zoekformulier -->
+<form action="/" method="GET">
+    <input type="text" name="search" placeholder="Zoek op omschrijving, bedrag, categorie..." value="<%= search || '' %>" />
+    
+    <!-- Filteren op inkomsten/uitgaven -->
+    <select name="isIncoming">
+        <option value="">Alle</option>
+        <option value="true" <%= isIncoming === 'true' ? 'selected' : '' %>>Inkomsten</option>
+        <option value="false" <%= isIncoming === 'false' ? 'selected' : '' %>>Uitgaven</option>
+    </select>
+
+    <button type="submit">Zoeken</button>
+</form>
+
+<!-- Navigatie voor inloggen/uitloggen -->
+<% if (user) { %>
+    <a href="/logout">Uitloggen</a>
+<% } else { %>
+    <a href="/login">Inloggen</a>
+<% } %>
+<!-- Inkomsten Sectie -->
+<h2>Inkomsten</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Omschrijving</th>
+            <th>Bedrag</th>
+            <th>Datum</th>
+            <th>Categorie</th>
+            <th>Betaalmethode</th>
+            <th>Acties</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% const incomeExpenses = expenses.filter(expense => expense.isIncoming); %>
+        <% if (incomeExpenses.length > 0) { %>
+            <% incomeExpenses.forEach(expense => { %>
+                <tr>
+                    <td><%= expense.description %></td>
+                    <td>€<%= expense.amount.toFixed(2) %></td>
+                    <td><%= new Date(expense.date).toLocaleDateString() %></td>
+                    <td><%= expense.category %></td>
+                    <td><%= expense.paymentMethod.method %></td>
+                    <td>
+                        <a href="/expenses/edit/<%= expense._id %>" class="btn-edit">Bewerken</a>
+                        <form action="/expenses/delete/<%= expense._id %>" method="POST" style="display: inline;">
+                            <button type="submit" class="btn-delete">Verwijderen</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <tr>
+                <td colspan="6">Geen inkomsten gevonden.</td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<!-- Uitgaven Sectie -->
+<h2>Uitgaven</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Omschrijving</th>
+            <th>Bedrag</th>
+            <th>Datum</th>
+            <th>Categorie</th>
+            <th>Betaalmethode</th>
+            <th>Acties</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% const expenseItems = expenses.filter(expense => !expense.isIncoming); %>
+        <% if (expenseItems.length > 0) { %>
+            <% expenseItems.forEach(expense => { %>
+                <tr>
+                    <td><%= expense.description %></td>
+                    <td>€<%= expense.amount.toFixed(2) %></td>
+                    <td><%= new Date(expense.date).toLocaleDateString() %></td>
+                    <td><%= expense.category %></td>
+                    <td><%= expense.paymentMethod.method %></td>
+                    <td>
+                        <a href="/expenses/edit/<%= expense._id %>" class="btn-edit">Bewerken</a>
+                        <form action="/expenses/delete/<%= expense._id %>" method="POST" style="display: inline;">
+                            <button type="submit" class="btn-delete">Verwijderen</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <tr>
+                <td colspan="6">Geen uitgaven gevonden.</td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<!-- Flashberichten -->
+<% if (successMessage) { %>
+    <div class="alert alert-success">
+        <%= successMessage %>
+    </div>
+<% } %>
+
+<% if (errorMessage) { %>
+    <div class="alert alert-danger">
+        <%= errorMessage %>
+    </div>
+<% } %>
+
+<a href="/expenses/add" class="btn-add">Nieuwe Transactie Toevoegen</a>
 
 <%- include('partials/footer') %>

@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+
+
+<div class="container">
+    <h1>Transactie Bewerken</h1>
+
+    <form action="/expenses/edit/<%= expense._id %>" method="POST">
+        <label for="description">Omschrijving</label>
+        <input type="text" id="description" name="description" value="<%= expense.description %>" required>
+
+        <label for="amount">Bedrag (€)</label>
+        <input type="number" id="amount" name="amount" step="0.01" value="<%= expense.amount %>" required>
+
+        <label for="date">Datum</label>
+        <input type="date" id="date" name="date" value="<%= new Date(expense.date).toISOString().split('T')[0] %>" required>
+
+        <label for="category">Categorie</label>
+        <input type="text" id="category" name="category" value="<%= expense.category %>" required>
+
+        <label for="isIncoming">Type Transactie</label>
+        <select id="isIncoming" name="isIncoming" required>
+            <option value="true" <%= expense.isIncoming ? "selected" : "" %>>Inkomst</option>
+            <option value="false" <%= !expense.isIncoming ? "selected" : "" %>>Uitgave</option>
+        </select>
+
+        <label for="paymentMethod">Betaalmethode</label>
+        <input type="text" id="paymentMethod" name="paymentMethod" value="<%= expense.paymentMethod.method %>" required>
+
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" name="tags" value="<%= expense.tags.join(', ') %>">
+
+        <button type="submit">Bewerken</button>
+    </form>
+
+
+    <a href="/expenses" class="btn-back">Terug naar overzicht</a>
+</div>
+<% if (successMessage) { %>
+    <div class="alert alert-success">
+        <%= successMessage %>
+    </div>
+<% } %>
+<% if (errorMessage) { %>
+    <div class="alert alert-danger">
+        <%= errorMessage %>
+    </div>
+<% } %>
+    <%- include('partials/footer') %>

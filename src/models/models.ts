@@ -32,6 +32,6 @@ export interface User {
     _id?: ObjectId; // MongoDB's unieke ID
     name: string;
     email: string;
-    expenses: ObjectId[]; // Verwijzing naar Expense-documenten in de database
+    expenses: Expense[]; // Verwijzing naar Expense-documenten in de database
     budget: Budget;
 }

@@ -1,3 +1,4 @@
+/* Algemene reset en standaardinstellingen */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,153 +6,201 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Achtergrond van de pagina */
 body {
-    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
     color: #333;
-    line-height: 1.6;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Hoofdcontainer voor de pagina */
+/* Container voor de bewerkingspagina */
 .container {
     width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-/* Koptekst */
+/* Formulierkoptekst */
 h1 {
     text-align: center;
-    color: #333;
+    color: #2c3e50;
     margin-bottom: 20px;
-    font-size: 2.5rem;
 }
 
-/* Formulier stijlen */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Stijl voor labels */
+/* Label styling */
 label {
-    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #444;
+    color: #2c3e50;
 }
 
-/* Inputvelden, textarea en select dropdown */
+/* Inputvelden, select en textarea */
 input,
 select,
 textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    background-color: #fafafa;
-    color: #333;
     width: 100%;
-    transition: border-color 0.3s ease-in-out;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
+/* Focus-effect voor inputvelden */
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #007bff;
+    border-color: #3498db;
     outline: none;
 }
 
-/* Stijl voor de knop */
+/* Submit knop */
 button {
     padding: 12px;
-    background-color: #007bff;
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
+    margin-top: 20px;
 }
 
+/* Hover-effect voor de submit knop */
 button:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
 
-/* Stijl voor foutmeldingen */
-.error-message {
-    color: red;
-    font-size: 0.9rem;
+/* Terugknop */
+a.btn-back {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
     text-align: center;
-    padding: 10px;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    border-radius: 8px;
 }
 
-/* Tabelstijl voor uitgaven */
+/* Hover-effect voor terugknop */
+a.btn-back:hover {
+    background-color: #c0392b;
+}
+
+/* Tabel styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 th,
 td {
-    padding: 12px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
+/* Styling voor de tabelkoppen */
 th {
-    background-color: #007bff;
+    background-color: #3498db;
     color: white;
-    font-size: 1.1rem;
+}
+
+/* Hover-effect voor rijen */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Responsieve stijlen voor kleine schermen */
-@media (max-width: 768px) {
-    .container {
-        margin: 20px;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    form {
-        gap: 15px;
-    }
-
-    button {
-        font-size: 0.9rem;
-    }
+/* Knop styling voor bewerking en verwijdering */
+button,
+a {
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
 }
 
-/* Extra styling voor specifieke elementen */
-header,
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+.btn-add {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
     margin-top: 20px;
 }
 
-header {
-    margin-bottom: 30px;
+.btn-add:hover {
+    background-color: #2980b9;
 }
 
-footer {
-    margin-top: 50px;
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.alert-success {
+    color: #155724;
+
+}
+
+.alert-danger {
+    color: #721c24;
+
+}
+
+/* Responsieve styling voor kleine schermen */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
