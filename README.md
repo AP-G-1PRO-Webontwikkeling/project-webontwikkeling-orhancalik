@@ -15,4 +15,4 @@ Vereisten
 -Express.js
 -EJS
 
-/Geen externe database vereist, maar kan eenvoudig uitgebreid worden met MongoDB of een andere database./
+https://project-webontwikkeling-orhancalik.onrender.com/
