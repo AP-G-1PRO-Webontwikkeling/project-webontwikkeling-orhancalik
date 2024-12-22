@@ -10,17 +10,17 @@ export interface PaymentMethod {
 }
 
 export interface Expense {
-    _id?: ObjectId; // MongoDB's unieke ID
+    _id?: ObjectId;
     description: string;
     amount: number;
-    date: Date; // Datum als Date-object
+    date: Date;
     currency: string;
     paymentMethod: PaymentMethod;
     isIncoming: boolean;
     category: string;
     tags: string[];
     isPaid: boolean;
-    userId: ObjectId; // Verander naar ObjectId (niet number)
+    userId: ObjectId;
 }
 
 export interface Budget {
@@ -30,9 +30,9 @@ export interface Budget {
 }
 
 export interface User {
-    _id?: ObjectId; // MongoDB's unieke ID
+    _id?: ObjectId;
     name: string;
     email: string;
-    expenses: Expense[]; // Verwijzing naar Expense-documenten in de database
+    expenses: Expense[];
     budget: Budget;
 }
