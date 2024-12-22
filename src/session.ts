@@ -16,10 +16,10 @@ mongoStore.on("connected", () => {
     console.log("MongoDB session store connected");
 });
 
-// Breid de SessionData interface uit om userId toe te voegen
+
 declare module 'express-session' {
     export interface SessionData {
-        userId?: string;  // Voeg userId toe als een optioneel veld
+        userId?: string;
         user?: string;
     }
 }

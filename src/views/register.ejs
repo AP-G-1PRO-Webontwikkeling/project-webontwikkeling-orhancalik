@@ -6,13 +6,21 @@
 <form action="/register" method="POST">
     <label for="username">Gebruikersnaam:</label>
     <input type="text" id="username" name="username" required>
-    
+
     <label for="password">Wachtwoord:</label>
     <input type="password" id="password" name="password" required>
-    
+
+    <label for="monthlyLimit">Maandelijks Budget (€):</label>
+    <input type="number" id="monthlyLimit" name="monthlyLimit" required>
+
+    <label for="notificationThreshold">Notificatie Drempel (% van budget):</label>
+    <input type="number" id="notificationThreshold" name="notificationThreshold" required>
+
+    <label for="receiveNotifications">Ontvang notificaties:</label>
+    <input type="checkbox" id="receiveNotifications" name="receiveNotifications">
+
     <button type="submit">Registreren</button>
 </form>
 
-<button onclick="window.location.href='/login';">Al een account? Log in hier</button>
 
 <%- include('partials/footer') %>

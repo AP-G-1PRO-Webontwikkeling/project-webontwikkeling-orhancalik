@@ -13,7 +13,7 @@ router.get("/register", (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, monthlyLimit, notificationThreshold, receiveNotifications } = req.body;
     const db = getDb();
 
     // Controleer of de gebruiker al bestaat
@@ -26,15 +26,22 @@ router.post("/register", async (req, res) => {
     // Hasht het wachtwoord
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Voeg de nieuwe gebruiker toe
+    // Voeg de nieuwe gebruiker toe met budgetinformatie
     await db.collection("users").insertOne({
         username,
         password: hashedPassword,
+        budget: {
+            monthlyLimit: parseFloat(monthlyLimit),
+            notificationThreshold: parseFloat(notificationThreshold),
+            isActive: true,
+        },
+        receiveNotifications: receiveNotifications === "on",
     });
 
     req.flash("success", "Registratie succesvol!");
     res.redirect("/login");
 });
+
 
 // Login
 router.get("/login", isLoggedIn, (req, res) => {

@@ -11,15 +11,16 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
-// Middleware
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-// Stel EJS in als view engine
+
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-
 
 
 app.use(sessionMiddleware);
@@ -28,13 +29,13 @@ app.use(flash());
 app.use((req, res, next) => {
     res.locals.successMessage = req.flash("success");
     res.locals.errorMessage = req.flash("error");
-    next();
+    res.locals.warningMessage = req.flash('warning'),
+        next();
 });
 
 
 app.use("/", expensesRouter);
 app.use("/", authRouter);
-
 
 
 app.get("/check-session", (req, res) => {
@@ -44,7 +45,8 @@ app.get("/check-session", (req, res) => {
         res.json({ message: "No active session" });
     }
 });
-// Verbinden met database en server starten
+
+
 connectToDatabase().then(() => {
     app.listen(PORT, () => {
         console.log(`Server draait op http://localhost:${PORT}`);
@@ -52,7 +54,3 @@ connectToDatabase().then(() => {
 }).catch(err => {
     console.error("Kan de server niet starten:", err);
 });
-
-
-
-

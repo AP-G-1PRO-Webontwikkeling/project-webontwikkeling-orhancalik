@@ -37,7 +37,7 @@ router.get("/", isAuthenticated, async (req, res) => {
         // Stuur filter, isIncoming en user naar de view
         const isIncoming = filter === "income" ? "true" : filter === "expense" ? "false" : "";
 
-        res.render("index", { expenses, filter, search, isIncoming, userId: req.session.userId });
+        res.render("index", { expenses, filter, search, isIncoming, userId: req.session.userId, user });
 
     } catch (err) {
         console.error(err);
@@ -47,35 +47,84 @@ router.get("/", isAuthenticated, async (req, res) => {
 });
 
 // Voeg een nieuwe uitgave toe
-router.post("/expenses/add", async (req, res) => {
+// Voeg een nieuwe uitgave toe
+router.post("/expenses/add", async (req: Request, res: Response) => {
     try {
-        const { description, amount, category, isIncoming, date, paymentMethod } = req.body;
+        const { description, amount, category, isIncoming, date, paymentMethod, currency } = req.body;
         const db = getDb();
+        const userId = req.session.userId; // Haal de ingelogde gebruiker op uit de sessie
+
+        if (!userId) {
+            req.flash("error", "Gebruiker niet ingelogd.");
+            return res.redirect("/login");
+        }
+
+        // Zorg ervoor dat userId een ObjectId is
+        const userObjectId = new ObjectId(userId);
+
+        // Voeg de uitgave toe met het juiste userId
         await db.collection("expenses").insertOne({
             description,
             amount: parseFloat(amount),
             category,
+            isIncoming: isIncoming === "true",
             date: new Date(date),
             paymentMethod: { method: paymentMethod },
-            isIncoming: isIncoming === "true",
-            userId: 1,
+            currency, // Voeg currency toe
+            tags: [], // Stel tags in zoals gewenst
             isPaid: true,
-            tags: [],
+            userId: userObjectId, // Zorg ervoor dat dit een ObjectId is
         });
+
+        // Bereken de totale uitgaven van de gebruiker
+        const totalExpenses = await db.collection("expenses").aggregate([
+            { $match: { userId: userObjectId, isIncoming: false } },
+            { $group: { _id: null, total: { $sum: "$amount" } } }
+        ]).toArray();
+
+        const totalSpent = totalExpenses.length > 0 ? totalExpenses[0].total : 0;
+        const user = await db.collection("users").findOne({ _id: userObjectId });
+
+        const monthlyLimit = user?.budget.monthlyLimit || 0; // Maandbudget
+
+        // Bereken de 90% van het maandbudget
+        const ninetyPercentBudget = monthlyLimit * 0.9;
+
+        console.log("Total spent:", totalSpent); // Dit is de totale uitgave
+        console.log("Monthly Limit:", monthlyLimit); // Dit is het maandbudget
+        console.log("90% of Monthly Limit:", ninetyPercentBudget); // Dit is 90% van het maandbudget
+
+        // Controleer of de drempel wordt overschreden of bijna wordt overschreden
+        if (user?.receiveNotifications) {
+            if (totalSpent >= monthlyLimit) {
+                // Als het totaal gelijk of groter is dan het maandbudget
+                console.log("Waarschuwing geactiveerd: Drempel overschreden.");
+                req.flash("error", `Je hebt de drempel van je budget overschreden! Je hebt al €${totalSpent.toFixed(2)} uitgegeven.`);
+            } else if (totalSpent >= ninetyPercentBudget) {
+                // Als het totaal minstens 90% van het maandbudget is, maar nog niet overschreden
+                console.log("Waarschuwing geactiveerd: Drempel bijna bereikt.");
+                req.flash("error", `Je hebt de drempel van je budget bijna bereikt! Je hebt al €${totalSpent.toFixed(2)} uitgegeven.`);
+            } else {
+                console.log("Drempel nog niet bereikt.");
+            }
+        }
+
         req.flash("success", "Uitgave succesvol toegevoegd!");
         res.redirect("/");
+
     } catch (err) {
         console.error(err);
         req.flash("error", "Fout bij het toevoegen van uitgave.");
-
+        res.redirect("/");
     }
 });
+
+
+
 
 router.get("/expenses/add", (req, res) => {
     res.render("addExpense");
 });
-
-
 
 router.get("/expenses/edit/:id", async (req, res) => {
     try {
@@ -139,6 +188,5 @@ router.post("/expenses/delete/:id", async (req, res) => {
         res.redirect("/");
     }
 });
-
 
 export default router;

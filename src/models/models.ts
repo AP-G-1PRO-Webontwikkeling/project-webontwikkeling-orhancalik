@@ -1,4 +1,5 @@
 import { ObjectId } from 'mongodb';
+
 export interface PaymentMethod {
     method: string;
     cardDetails?: {
@@ -19,7 +20,7 @@ export interface Expense {
     category: string;
     tags: string[];
     isPaid: boolean;
-    userId: number; // Voeg userId toe
+    userId: ObjectId; // Verander naar ObjectId (niet number)
 }
 
 export interface Budget {

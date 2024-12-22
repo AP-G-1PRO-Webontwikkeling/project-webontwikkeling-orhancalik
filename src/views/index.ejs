@@ -12,6 +12,25 @@
 
 <h1>Overzicht van uw transacties</h1>
 
+<!-- Budgetwaarschuwing sectie -->
+<% if (user && user.budget && user.budget.notificationThreshold && user.budget.isActive) { %>
+    <% 
+        // Bereken de huidige uitgaven van de gebruiker
+        const totalExpenses = user.expenses.reduce((acc, expense) => acc + (expense.isIncoming ? 0 : expense.amount), 0);
+        const remainingBudget = user.budget.monthlyLimit - totalExpenses;
+        const isBudgetClose = remainingBudget <= user.budget.notificationThreshold;
+    %>
+    <% if (isBudgetClose) { %>
+        <div class="alert alert-warning">
+            <strong>Waarschuwing:</strong> Uw uitgaven benaderen het maandlimiet! U heeft nog <%= remainingBudget.toFixed(2) %> over.
+        </div>
+    <% } else { %>
+        <div class="alert alert-info">
+            U heeft nog <%= remainingBudget.toFixed(2) %> over van uw maandbudget van <%= user.budget.monthlyLimit.toFixed(2) %>.
+        </div>
+    <% } %>
+<% } %>
+
 <!-- Zoekformulier -->
 <form action="/" method="GET">
     <input type="text" name="search" placeholder="Zoek op omschrijving, bedrag, categorie..." value="<%= search || '' %>" />
@@ -25,7 +44,6 @@
 
     <button type="submit">Zoeken</button>
 </form>
-
 
 <!-- Inkomsten Sectie -->
 <h2>Inkomsten</h2>
@@ -118,6 +136,11 @@
     </div>
 <% } %>
 
+<% if (warningMessage) { %>
+    <div class="alert alert-warning">
+        <%= warningMessage %>
+    </div>
+<% } %>
 <a href="/expenses/add" class="btn-add">Nieuwe Transactie Toevoegen</a>
 
 <%- include('partials/footer') %>
