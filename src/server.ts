@@ -32,8 +32,8 @@ app.use((req, res, next) => {
 });
 
 
-
-app.use("/", expensesRouter, authRouter);
+app.use("/", expensesRouter);
+app.use("/", authRouter);
 
 
 

@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 import { getDb } from "../database";
 import bcrypt from "bcrypt";
 import { isLoggedIn } from "../middleware/authMiddleware";
