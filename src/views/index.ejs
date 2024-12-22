@@ -26,7 +26,7 @@
         </div>
     <% } else { %>
         <div class="alert alert-info">
-            U heeft nog <%= remainingBudget.toFixed(2) %> over van uw maandbudget van <%= user.budget.monthlyLimit.toFixed(2) %>.
+            U heeft nog <%= remainingBudget.toFixed(2) %> over van uw maandbudget van <%= user.budget.monthlyLimit.toFixed(2) %> .
         </div>
     <% } %>
 <% } %>
@@ -36,16 +36,17 @@
     <input type="text" name="search" placeholder="Zoek op omschrijving, bedrag, categorie..." value="<%= search || '' %>" />
     
     <!-- Filteren op inkomsten/uitgaven -->
-    <select name="isIncoming">
+    <select name="filter">
         <option value="">Alle</option>
-        <option value="true" <%= isIncoming === 'true' ? 'selected' : '' %>>Inkomsten</option>
-        <option value="false" <%= isIncoming === 'false' ? 'selected' : '' %>>Uitgaven</option>
+        <option value="income" <%= filter === 'income' ? 'selected' : '' %>>Inkomsten</option>
+        <option value="expense" <%= filter === 'expense' ? 'selected' : '' %>>Uitgaven</option>
     </select>
 
     <button type="submit">Zoeken</button>
 </form>
 
 <!-- Inkomsten Sectie -->
+<% if (!filter || filter === 'income') { %> <!-- Alleen weergeven als filter op inkomens is of geen filter is ingesteld -->
 <h2>Inkomsten</h2>
 <table>
     <thead>
@@ -83,8 +84,10 @@
         <% } %>
     </tbody>
 </table>
+<% } %>
 
 <!-- Uitgaven Sectie -->
+<% if (!filter || filter === 'expense') { %> <!-- Alleen weergeven als filter op uitgaven is of geen filter is ingesteld -->
 <h2>Uitgaven</h2>
 <table>
     <thead>
@@ -122,6 +125,7 @@
         <% } %>
     </tbody>
 </table>
+<% } %>
 
 <!-- Flashberichten -->
 <% if (successMessage) { %>
@@ -136,11 +140,7 @@
     </div>
 <% } %>
 
-<% if (warningMessage) { %>
-    <div class="alert alert-warning">
-        <%= warningMessage %>
-    </div>
-<% } %>
+
 <a href="/expenses/add" class="btn-add">Nieuwe Transactie Toevoegen</a>
 
 <%- include('partials/footer') %>
