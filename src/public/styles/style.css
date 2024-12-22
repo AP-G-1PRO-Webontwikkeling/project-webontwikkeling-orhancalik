@@ -1,4 +1,3 @@
-/* Algemene reset en standaardinstellingen */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,9 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ecf0f1;
-    /* Lichtgrijze achtergrond voor rust */
     color: #333;
-    /* Donkere tekst voor leesbaarheid */
     margin: 0;
     padding: 0;
     display: flex;
@@ -74,7 +71,6 @@ input:focus,
 select:focus,
 textarea:focus {
     border-color: #3498db;
-    /* Blauwe rand bij focus */
     outline: none;
 }
 
@@ -82,7 +78,6 @@ textarea:focus {
 button {
     padding: 14px;
     background-color: #3498db;
-    /* Blauwe knop */
     color: white;
     border: none;
     border-radius: 6px;
@@ -95,14 +90,12 @@ button {
 /* Hover-effect voor de submit knop */
 button:hover {
     background-color: #2980b9;
-    /* Donkerder blauw bij hover */
 }
 
 /* Terugknop */
 a.btn-back {
     display: inline-block;
     background-color: #e74c3c;
-    /* Rood voor terugknop */
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -115,7 +108,6 @@ a.btn-back {
 /* Hover-effect voor terugknop */
 a.btn-back:hover {
     background-color: #c0392b;
-    /* Donkerder rood bij hover */
 }
 
 /* Tabel styling */
@@ -135,7 +127,6 @@ td {
 /* Styling voor de tabelkoppen */
 th {
     background-color: #3498db;
-    /* Blauwe koppen */
     color: white;
 }
 
@@ -146,7 +137,6 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #ecf0f1;
-    /* Lichte grijze hover achtergrond */
 }
 
 /* Knop styling voor bewerking en verwijdering */
@@ -162,31 +152,26 @@ a {
 
 .btn-edit {
     background-color: #2ecc71;
-    /* Groene bewerk-knop */
     color: white;
 }
 
 .btn-edit:hover {
     background-color: #27ae60;
-    /* Donkerder groen bij hover */
 }
 
 .btn-delete {
     background-color: #e74c3c;
-    /* Rood voor verwijderen */
     color: white;
     border: none;
 }
 
 .btn-delete:hover {
     background-color: #c0392b;
-    /* Donkerder rood bij hover */
 }
 
 .btn-add {
     display: inline-block;
     background-color: #3498db;
-    /* Blauwe toevoeg knop */
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -196,7 +181,6 @@ a {
 
 .btn-add:hover {
     background-color: #2980b9;
-    /* Donkerder blauw bij hover */
 }
 
 /* Alert styling */
@@ -241,7 +225,6 @@ a {
 .btn-logout,
 .btn-login {
     background-color: #f44336;
-    /* Rood voor uitloggen/inloggen */
     color: white;
     padding: 12px 20px;
     border: none;
@@ -255,7 +238,6 @@ a {
 .btn-logout:hover,
 .btn-login:hover {
     background-color: #d32f2f;
-    /* Donkerder rood bij hover */
 }
 
 /* Responsieve styling voor kleine schermen */

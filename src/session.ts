@@ -1,4 +1,3 @@
-// session.ts
 import session, { SessionData } from 'express-session';
 import mongoDbSession from 'connect-mongodb-session';
 import dotenv from 'dotenv';
